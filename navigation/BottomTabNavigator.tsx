@@ -19,7 +19,7 @@ import { BottomTabParamList, TabOneParamList, TabTwoParamList } from "../types";
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
 export default function BottomTabNavigator() {
-    const colorScheme = useColorScheme();
+    const colorScheme = /*useColorScheme()*/ "light"; // TODO: Fix before deploy
 
     return (
         <BottomTab.Navigator
