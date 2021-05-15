@@ -42,7 +42,8 @@ const styles = StyleSheet.create({
         // backgroundColor:"white",
         flex: 1,
         justifyContent: "center",
-        paddingHorizontal:"10%"
+        paddingHorizontal:"10%",
+        backgroundColor:"white"
     },
     textDescription:{
         width:"100%"

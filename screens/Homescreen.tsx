@@ -1,11 +1,27 @@
+import { StackNavigationProp } from "@react-navigation/stack";
 import * as React from "react";
-import { StyleSheet ,Image,Text,View,TextInput ,Button,Alert} from "react-native";
+import { StyleSheet ,Image,Alert, TouchableOpacity} from "react-native";
+import { Text, View, Button } from "../components/Themed";
+import { OnboardingParamList } from "../types";
 
+type OnboardingNavProp = StackNavigationProp<OnboardingParamList, "Choice">;
 
-export default function Homescreen() {
+type Props = {
+    navigation: OnboardingNavProp;
+}
+
+export default function Onboarding1(props: Props) {
+    const { navigation } = props;
+    const business = () => {
+        navigation.navigate("Business");
+    };
+    const customer = () => {
+        navigation.navigate("Customer");
+    };
+
     return (
         <View style={styles.container}>
-            <Image style={styles.imagetop} source={require('../assets/Vector1.png')}/>
+            <Image style={styles.imagetop} source={require("../assets/Vector1.png")}/>
             <View style={styles.form}>
                 <Text>
                     <h1>Hi there!</h1>
@@ -14,18 +30,14 @@ export default function Homescreen() {
                     <h1>Let me get to know you better!</h1>
                 </Text>
                 <View>
-                    <Text><h4>Are you a</h4></Text>
-                    <View style={styles.buttons}>
-                        < Button color="black" title="Business Owner" onPress={() => Alert.alert('Simple Button pressed')}/>
-                        <Text>             </Text>
-                        < Button color="black" title="Customer" onPress={() => Alert.alert('Simple Button pressed')}/>
-                    </View>
+                    <Text><h3>Are you a</h3></Text>
                     
+                    <Button text="Business Owner" onPress={business} />
+                    <Button text="Customer" onPress={customer} />
                 </View>
             </View>
             
-            <Image style={styles.imagebottom} source={require('../assets/Vector2.png')}/>
-            <Image style={styles.imagenext} source={require('../assets/next.png')}/>
+            <Image style={styles.imagebottom} source={require("../assets/Vector2.png")}/>
         </View>
     );
 }
@@ -33,17 +45,19 @@ export default function Homescreen() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        fontFamily: "DM-Sans" ,
+        alignContent:"center",
+        justifyContent:"center",
+        fontFamily: "DM-Sans",
+        paddingHorizontal: "20%",
+        paddingVertical: "10%"
     },
     form:{
-        marginLeft:"40px",
-        position:"absolute",
-        top:"130px",
-
+        backgroundColor:"transparent"
     },
     imagetop:{
         width:"165px",
         height:"251px",
+        position: "absolute",
         top:"0px",
         left:"0px",
     },
@@ -59,15 +73,6 @@ const styles = StyleSheet.create({
         bottom:"0px",
         right:"0px",
         float:"right", 
-    },
-    imagenext:{
-        width:"50px",
-        height:"50px",
-        position:"absolute",
-        bottom:"30px",
-        right:"30px",
-        backgroundColor:"black",
-        borderRadius:50,
-    },
+    }
    
 });
