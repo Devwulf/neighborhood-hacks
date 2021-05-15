@@ -3,7 +3,7 @@ import { StyleSheet, View ,Image,Text } from "react-native";
 //import onBoarding2 from "../assets/onBoarding2.png";
 // import { View } from "../components/Themed";
 
-export default function Onboarding() {
+export default function Onboarding2() {
     return (
         <View style={styles.container}>
             <Image style={styles.image} source={require('../assets/onBoarding2.png')}/>

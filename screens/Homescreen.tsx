@@ -16,15 +16,16 @@ export default function Homescreen() {
                 <View>
                     <Text><h4>Are you a</h4></Text>
                     <View style={styles.buttons}>
-                        < Button  title="Business Owner" onPress={() => Alert.alert('Simple Button pressed')}/>
+                        < Button color="black" title="Business Owner" onPress={() => Alert.alert('Simple Button pressed')}/>
                         <Text>             </Text>
-                        < Button title="Customer" onPress={() => Alert.alert('Simple Button pressed')}/>
+                        < Button color="black" title="Customer" onPress={() => Alert.alert('Simple Button pressed')}/>
                     </View>
                     
                 </View>
             </View>
             
             <Image style={styles.imagebottom} source={require('../assets/Vector2.png')}/>
+            <Image style={styles.imagenext} source={require('../assets/next.png')}/>
         </View>
     );
 }
@@ -59,4 +60,14 @@ const styles = StyleSheet.create({
         right:"0px",
         float:"right", 
     },
+    imagenext:{
+        width:"50px",
+        height:"50px",
+        position:"absolute",
+        bottom:"30px",
+        right:"30px",
+        backgroundColor:"black",
+        borderRadius:50,
+    },
+   
 });

@@ -2,7 +2,7 @@ import * as React from "react";
 import {StyleSheet,Text,Button,Alert,View,Image,TextInput} from "react-native"
 import { AntDesign } from '@expo/vector-icons';
 import {useState} from "react";
-export default function ServicesOffered(){
+export default function Speciality(){
     const [text,setText]=useState('');
     return(
     <View style={styles.container}>

@@ -47,6 +47,7 @@ export default function OwnerDetails() {
                     <TextInput autoCompleteType="off" style={styles.textinput} placeholder='Twitter' onChangeText={text=>setText(text)}/>
                 </View>
             </ScrollView>
+            <Image style={styles.imagenext} source={require('../assets/next.png')}/>
             {/* <Image style={styles.imagebottom} source={require('../assets/Vector2.png')}/> */}
         </View>
     );
@@ -60,7 +61,8 @@ const styles = StyleSheet.create({
     textinput:{
         height:"40px",
         backgroundColor:"lightgrey",
-        width:"300px"
+        width:"300px",
+        marginBottom:"10px"
     },
     form:{
         marginLeft:"40px",
@@ -84,5 +86,14 @@ const styles = StyleSheet.create({
         bottom:"0px",
         right:"0px",
         float:"right", 
+    },
+    imagenext:{
+        width:"50px",
+        height:"50px",
+        position:"absolute",
+        bottom:"30px",
+        right:"10px",
+        backgroundColor:"black",
+        borderRadius:50,
     },
 });

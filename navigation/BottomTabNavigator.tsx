@@ -37,7 +37,7 @@ export default function BottomTabNavigator() {
             tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
             <BottomTab.Screen
                 name="TabOne"
-                component={Register}
+                component={OwnerDetails}
                 options={{
                     tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
                 }}

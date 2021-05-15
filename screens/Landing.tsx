@@ -4,7 +4,7 @@ import { StyleSheet,Image } from "react-native";
 import EditScreenInfo from "../components/EditScreenInfo";
 import { Text, View } from "../components/Themed";
 
-export default function TabTwoScreen() {
+export default function Landing() {
     return (
         <View style={styles.container}>
        
@@ -21,6 +21,7 @@ export default function TabTwoScreen() {
          <Text> <h1>#LoveLocals</h1></Text>
          </View>
          <Image style={styles.imagebottom}source={require('../assets/Vector2.png')} /> 
+         <Image style={styles.imagenext} source={require('../assets/next.png')}/>
         </View>
     );
 }
@@ -96,5 +97,15 @@ const styles = StyleSheet.create({
         alignItems:"center",
         justifyContent:"center",
         
-    }
+    },
+    imagenext:{
+        width:"50px",
+        height:"50px",
+        position:"absolute",
+        bottom:"30px",
+        right:"30px",
+        backgroundColor:"black",
+        borderRadius:50,
+    },
+   
 });
