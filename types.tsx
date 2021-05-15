@@ -4,7 +4,7 @@
  */
 
 export type RootStackParamList = {
-  Root: undefined;
+  Login: undefined;
   NotFound: undefined;
 };
 
@@ -20,3 +20,51 @@ export type TabOneParamList = {
 export type TabTwoParamList = {
   TabTwoScreen: undefined;
 };
+
+export type LoginParamList = {
+  Login: undefined;
+  Signup: undefined;
+  Onboarding: undefined;
+}
+
+export type OnboardingParamList = {
+  One: undefined;
+  Two: undefined;
+  Three: undefined;
+  Choice: undefined;
+  Business: undefined;
+  Customer: undefined;
+}
+
+export type BusinessWizardParamList = {
+  Details: undefined;
+  Services: undefined;
+  Location: undefined;
+  Specialty: undefined;
+  AllSet: undefined;
+  Business: undefined;
+}
+
+export type CustomerWizardParamList = {
+  Details: undefined;
+  Location: undefined;
+  Services: undefined;
+  Liked: undefined;
+  AllSet: undefined;
+  Customer: undefined;
+}
+
+export type BusinessParamList = {
+  Home: undefined;
+  Liked: undefined;
+  Notification: undefined;
+  Profile: undefined;
+}
+
+export type CustomerParamList = {
+  Home: undefined;
+  Liked: undefined;
+  Tinder: undefined;
+  Notification: undefined;
+  Profile: undefined;
+}
