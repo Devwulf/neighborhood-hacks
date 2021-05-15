@@ -10,10 +10,13 @@ import * as React from "react";
 
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
-import Onboarding from "../screens/Onboarding";
+import Onboarding1 from "../screens/Onboarding1";
+import Onboarding3 from "../screens/Onboarding3";
+import Onboarding2 from "../screens/Onboarding2";
 import TabOneScreen from "../screens/TabOneScreen";
 import TabTwoScreen from "../screens/TabTwoScreen";
 import Template from "../screens/Template";
+import Login from "../screens/Login"
 import { BottomTabParamList, TabOneParamList, TabTwoParamList } from "../types";
 import Landing from "../screens/Landing"
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
@@ -34,7 +37,7 @@ export default function BottomTabNavigator() {
             />
             <BottomTab.Screen
                 name="TabTwo"
-                component={TabTwoNavigator}
+                component={Onboarding2}
                 options={{
                     tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
                 }}

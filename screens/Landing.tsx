@@ -7,10 +7,14 @@ import { Text, View } from "../components/Themed";
 export default function TabTwoScreen() {
     return (
         <View style={styles.container}>
-         <Image source={require('../assets/hifi.jpg')}/>
-         {/* <Image source={require('../assets/landingpage/logo.png')} /> 
-         <Text>#LoveLocals</Text>
-         <Image source={require('../assets/landingpage/Vector2.png')} />  */}
+       
+         <Image style={styles.imagetop} source={require('../assets/vector1.png')} />
+         <View style={styles.middle}>
+         <Image style={styles.logo} source={require('../assets/logo.png')} /> 
+         <Text> <h1>#LoveLocals</h1></Text>
+         </View>
+         
+         <Image style={styles.imagebottom}source={require('../assets/Vector2.png')} /> 
         </View>
     );
 }
@@ -18,16 +22,33 @@ export default function TabTwoScreen() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
     },
-    title: {
-        fontSize: 20,
-        fontWeight: "bold",
+    logo:{
+     width:"200px",
+     height:"70px",
+     
     },
-    separator: {
-        marginVertical: 30,
-        height: 1,
-        width: "80%",
+    imagetop:{
+        width:"165px",
+        height:"251px",
+        top:"0px",
+        left:"0px",
+
     },
+    imagebottom:{
+        width:"165px",
+        height:"251px",
+        position:"absolute",
+        bottom:"0px",
+        right:"0px",
+       
+        
+    },
+    middle:{
+        display:"flex",
+        flexDirection:"column",
+        alignItems:"center",
+        justifyContent:"center",
+        
+    }
 });
