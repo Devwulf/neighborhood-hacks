@@ -31,4 +31,7 @@ export type OnboardingParamList = {
   One: undefined;
   Two: undefined;
   Three: undefined;
+  Choice: undefined;
+  Business: undefined;
+  Customer: undefined;
 }

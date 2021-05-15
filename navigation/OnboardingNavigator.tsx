@@ -1,5 +1,6 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import React from "react";
+import DummyChoiceScreen from "../screens/testScreens/DummyChoiceScreen";
 import DummyOneScreen from "../screens/testScreens/DummyOneScreen";
 import DummyThreeScreen from "../screens/testScreens/DummyThreeScreen";
 import DummyTwoScreen from "../screens/testScreens/DummyTwoScreen";
@@ -13,6 +14,7 @@ export function OnboardingNavigator() {
             <Stack.Screen name="One" component={DummyOneScreen} />
             <Stack.Screen name="Two" component={DummyTwoScreen} />
             <Stack.Screen name="Three" component={DummyThreeScreen} />
+            <Stack.Screen name="Choice" component={DummyChoiceScreen} />
         </Stack.Navigator>
     );
 }

@@ -5,26 +5,31 @@ import { Button, StyleSheet } from "react-native";
 import { Text, View } from "../../components/Themed";
 import { OnboardingParamList } from "../../types";
 
-type OnboardingNavProp = StackNavigationProp<OnboardingParamList, "Three">;
+type OnboardingNavProp = StackNavigationProp<OnboardingParamList, "Choice">;
 type Props = {
     navigation: OnboardingNavProp;
 }
 
-export default function DummyThreeScreen(props: Props) {
+export default function DummyChoiceScreen(props: Props) {
     const { navigation } = props;
     const goToBack = () => {
-        navigation.navigate("Two");
+        navigation.navigate("Three");
     };
 
-    const goToNext = () => {
-        navigation.navigate("Choice");
+    const goToBusiness = () => {
+        navigation.navigate("Business");
+    };
+
+    const goToCustomer = () => {
+        navigation.navigate("Customer");
     };
 
     return (
         <View style={styles.container}>
-            <Text>Three</Text>
             <Button title="Back" onPress={goToBack} />
-            <Button title="Next" onPress={goToNext} />
+            <Text>Are you a</Text>
+            <Button title="Business Owner" onPress={goToBusiness} />
+            <Button title="Customer" onPress={goToCustomer} />
         </View>
     );
 }
