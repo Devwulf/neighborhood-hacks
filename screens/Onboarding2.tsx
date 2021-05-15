@@ -11,6 +11,7 @@ export default function Onboarding() {
             <Text><h1>#Your dollars stays in community</h1></Text>
             <Text style={styles.textDescription}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ducimus nobis incidunt molestias tenetur. Similique quasi sapiente facilis quidem a, magni consequatur perferendis dolor, velit provident at incidunt, voluptates animi.</Text>
             <Image style={styles.imagebottom} source={require('../assets/Vector2.png')}/>
+            <Image style={styles.imagenext} source={require('../assets/next.png')}/>
         </View>
     );
 }
@@ -34,7 +35,15 @@ const styles = StyleSheet.create({
         position:"absolute",
         bottom:"0px",
         right:"0px",
-        float:"right",
-        
+        float:"right",      
+    },
+    imagenext:{
+        width:"50px",
+        height:"50px",
+        position:"absolute",
+        bottom:"30px",
+        right:"30px",
+        backgroundColor:"black",
+        borderRadius:50,
     },
 });

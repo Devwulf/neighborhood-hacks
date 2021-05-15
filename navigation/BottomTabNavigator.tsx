@@ -15,6 +15,7 @@ import Location from "../screens/Location";
 import Onboarding3 from "../screens/Onboarding3";
 import Onboarding2 from "../screens/Onboarding2";
 import TabOneScreen from "../screens/TabOneScreen";
+import OwnerendScreen from "../screens/OwnerendScreen";
 import TabTwoScreen from "../screens/TabTwoScreen";
 import Template from "../screens/Template";
 import Login from "../screens/Login";
@@ -23,6 +24,8 @@ import OwnerDetails from "../screens/OwnerDetails";
 import { BottomTabParamList, TabOneParamList, TabTwoParamList } from "../types";
 import Landing from "../screens/Landing"
 import Homescreen from "../screens/Homescreen";
+import ServicesOffered from "../screens/Location";
+import Register from "../screens/Register";
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
 export default function BottomTabNavigator() {
@@ -34,14 +37,14 @@ export default function BottomTabNavigator() {
             tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
             <BottomTab.Screen
                 name="TabOne"
-                component={Speciality}
+                component={Register}
                 options={{
                     tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
                 }}
             />
             <BottomTab.Screen
                 name="TabTwo"
-                component={Onboarding3}
+                component={ServicesOffered}
                 options={{
                     tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
                 }}

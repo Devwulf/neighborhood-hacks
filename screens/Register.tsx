@@ -1,23 +1,30 @@
 import * as React from "react";
 import {useState} from "react"
-import { StyleSheet ,Image,Text,View,TextInput ,Button,Alert} from "react-native";
+import { StyleSheet,Image,Text,View,TextInput ,Button,Alert} from "react-native";
 
-export default function Login() {
+
+export default function Register() {
     const [text,setText]=useState('');
+    const [email,setEmail]=useState('');
     const [password,setPassword]=useState('');
     return (
         <View style={styles.container}>
             <Image style={styles.imagetop} source={require('../assets/Vector1.png')}/>
-            <Image style={styles.logo} source={require('../assets/logo.png')}/>
             <View style={styles.form}>
                 <Text>
-                    <h1>Sign-in</h1> 
+                    <h1>Register</h1> 
                 </Text>
+                <View style={styles.formcomponent}>
+                    <Text>
+                        Name
+                    </Text>
+                    <TextInput autoCompleteType="off" style={styles.textinput} placeholder='Enter your Name' onChangeText={text=>setText(text)}/>
+                </View>
                 <View style={styles.formcomponent}>
                     <Text>
                         Email-address
                     </Text>
-                    <TextInput autoCompleteType="off" style={styles.textinput} placeholder='Enter valid email-id' onChangeText={text=>setText(text)}/>
+                    <TextInput autoCompleteType="off" style={styles.textinput} placeholder='Enter valid email-id' onChangeText={text=>setEmail(text)}/>
                 </View>
                 <View style={styles.formcomponent}>
                     <Text>
@@ -25,20 +32,12 @@ export default function Login() {
                     </Text>
                     <TextInput style={styles.textinput} placeholder='Enter Password' onChangeText={text=>setPassword(text)}/>
                 </View>
-                <Text>
-                   Forgot Password?
-                </Text>
                 <View style={{width:150,marginTop:20}}>
-                < Button color="black"  title="Login" onPress={() => Alert.alert('Simple Button pressed')}/>
+                < Button color="black" title="Create Account" onPress={() => Alert.alert('Simple Button pressed')}/>
                 </View>
-               <Text>
-                   Don't have an account? Sign up!
+                <Text>
+                   Already have an account?Login!
                </Text>
-                <View style={styles.icons}>
-                <Image style={styles.icon} source={require('../assets/fb.png')}/>
-                <Image style={styles.icon} source={require('../assets/g.png')}/>
-                </View>
-              
             </View>
             <Image style={styles.imagebottom} source={require('../assets/Vector2.png')}/>
         </View>
@@ -51,24 +50,17 @@ const styles = StyleSheet.create({
         
         fontFamily: "DM-Sans" ,
     },
-    logo:{
-        width:"200px",
-        height:"100px",
-        position:"absolute",
-        top:"50px",
-        left:"100px",
-    },
     form:{
         marginLeft:"40px",
         position:"absolute",
-        top:"200px",
+        top:"100px",
         alignItems:"center"
     },
     textinput:{
+        borderRadius:8,
         height:"40px",
         backgroundColor:"lightgrey",
-        width:"300px"
-
+        width:"300px",
     },
     formcomponent:{
         margin:"10px"
