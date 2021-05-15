@@ -7,7 +7,7 @@
 
 
 ![ownerform1](https://user-images.githubusercontent.com/43006347/118358543-e8c9d880-b59c-11eb-9e29-c4c64bc845f7.JPG)
-![singnin](https://user-images.githubusercontent.com/43006347/118358544-e8c9d880-b59c-11eb-85a5-884e1a7c44de.JPG)
+![ownerform1screen2](https://user-images.githubusercontent.com/43006347/118358621-5b3ab880-b59d-11eb-9bf8-910cecbd64f5.JPG)
 
 ![homescreen](https://user-images.githubusercontent.com/43006347/118358545-e8c9d880-b59c-11eb-8380-90509be25f52.JPG)
 
