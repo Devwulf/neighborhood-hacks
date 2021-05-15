@@ -15,11 +15,16 @@ export default function DummyCustomerWizAllSetScreen(props: Props) {
     const goToBack = () => {
         navigation.navigate("Liked");
     };
+    
+    const goToNext = () => {
+        navigation.navigate("Customer");
+    };
 
     return (
         <View style={styles.container}>
             <Text>All Set</Text>
             <Button title="Back" onPress={goToBack} />
+            <Button title="Next" onPress={goToNext} />
         </View>
     );
 }

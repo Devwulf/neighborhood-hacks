@@ -51,11 +51,20 @@ export type CustomerWizardParamList = {
   Services: undefined;
   Liked: undefined;
   AllSet: undefined;
+  Customer: undefined;
 }
 
 export type BusinessParamList = {
   Home: undefined;
   Liked: undefined;
+  Notification: undefined;
+  Profile: undefined;
+}
+
+export type CustomerParamList = {
+  Home: undefined;
+  Liked: undefined;
+  Tinder: undefined;
   Notification: undefined;
   Profile: undefined;
 }

@@ -6,6 +6,7 @@ import DummyCustomerWizLikedScreen from "../screens/testScreens/DummyCustomerWiz
 import DummyCustomerWizLocationScreen from "../screens/testScreens/DummyCustomerWizLocationScreen";
 import DummyCustomerWizServicesScreen from "../screens/testScreens/DummyCustomerWizServicesScreen";
 import { CustomerWizardParamList } from "../types";
+import { CustomerNavigator } from "./CustomerNavigator";
 
 const Stack = createStackNavigator<CustomerWizardParamList>();
 
@@ -17,6 +18,7 @@ export function CustomerWizardNavigator() {
             <Stack.Screen name="Services" component={DummyCustomerWizServicesScreen} />
             <Stack.Screen name="Liked" component={DummyCustomerWizLikedScreen} />
             <Stack.Screen name="AllSet" component={DummyCustomerWizAllSetScreen} />
+            <Stack.Screen name="Customer" component={CustomerNavigator} />
         </Stack.Navigator>
     );
 }
