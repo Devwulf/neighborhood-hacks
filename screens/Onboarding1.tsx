@@ -1,15 +1,37 @@
+import { StackNavigationProp } from "@react-navigation/stack";
 import * as React from "react";
 import { StyleSheet, View ,Image,Text } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
+import { OnboardingParamList } from "../types";
 // import { View } from "../components/Themed";
 
-export default function Onboarding1() {
+type OnboardingNavProp = StackNavigationProp<OnboardingParamList, "One">;
+
+type Props = {
+    navigation: OnboardingNavProp;
+}
+
+export default function Onboarding1(props: Props) {
+    const { navigation } = props;
+    const next = () => {
+        navigation.navigate("Two");
+    };
+
     return (
         <View style={styles.container} >
-            <Image style={styles.image} source={require('../assets/onboarding1.png')}/>
-            <Text><h1>#We support Locals</h1></Text>
-            <Text style={styles.textDescription}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ducimus nobis incidunt molestias tenetur. Similique quasi sapiente facilis quidem a, magni consequatur perferendis dolor, velit provident at incidunt, voluptates animi.</Text>
-            <Image style={styles.imagebottom} source={require('../assets/Vector2.png')}/>
-            <Image style={styles.imagenext} source={require('../assets/next.png')}/>
+            <Image style={styles.image} source={require("../assets/onboarding1.png")}/>
+            <View>
+                <Text><h1>#We support Locals</h1></Text>
+                <Text style={styles.textDescription}>
+                    Grid layouts offer rules of how you and your team should organize and position the UI elements to create a more consistent and effective layout. 
+                </Text>
+            </View>
+            <Image style={styles.imagebottom} source={require("../assets/Vector2.png")}/>
+            <View style={styles.imageNextContainer}>
+                <TouchableOpacity onPress={next}>
+                    <Image style={styles.imagenext} source={require("../assets/next.png")}/>
+                </TouchableOpacity>
+            </View>
         </View>
     );
 }
@@ -19,11 +41,12 @@ const styles = StyleSheet.create({
     container:{
         // backgroundColor:"white",
         flex: 1,
-            marginLeft:"20px",
-        },
-        textDescription:{
-            width:"320px"
-        },
+        justifyContent: "center",
+        paddingHorizontal:"10%"
+    },
+    textDescription:{
+        width:"100%"
+    },
     image:{
         width:"200px",
         height:"300px"
@@ -38,11 +61,12 @@ const styles = StyleSheet.create({
     imagenext:{
         width:"50px",
         height:"50px",
-        position:"absolute",
-        bottom:"30px",
-        right:"30px",
         backgroundColor:"black",
         borderRadius:50,
     },
-   
+    imageNextContainer: {
+        position:"absolute",
+        bottom:"30px",
+        right:"30px",
+    }
 });
