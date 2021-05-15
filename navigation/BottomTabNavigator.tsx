@@ -11,13 +11,15 @@ import * as React from "react";
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
 import Onboarding1 from "../screens/Onboarding1";
+import Location from "../screens/Location";
 import Onboarding3 from "../screens/Onboarding3";
 import Onboarding2 from "../screens/Onboarding2";
 import TabOneScreen from "../screens/TabOneScreen";
 import TabTwoScreen from "../screens/TabTwoScreen";
 import Template from "../screens/Template";
-import Login from "../screens/Login"
-import OwnerDetails from "../screens/OwnerDetails"
+import Login from "../screens/Login";
+import Speciality from "../screens/Speciality";
+import OwnerDetails from "../screens/OwnerDetails";
 import { BottomTabParamList, TabOneParamList, TabTwoParamList } from "../types";
 import Landing from "../screens/Landing"
 import Homescreen from "../screens/Homescreen";
@@ -32,7 +34,7 @@ export default function BottomTabNavigator() {
             tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
             <BottomTab.Screen
                 name="TabOne"
-                component={OwnerDetails}
+                component={Speciality}
                 options={{
                     tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
                 }}
