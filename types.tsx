@@ -4,7 +4,7 @@
  */
 
 export type RootStackParamList = {
-  Root: undefined;
+  Login: undefined;
   NotFound: undefined;
 };
 
@@ -24,4 +24,11 @@ export type TabTwoParamList = {
 export type LoginParamList = {
   Login: undefined;
   Signup: undefined;
+  Onboarding: undefined;
+}
+
+export type OnboardingParamList = {
+  One: undefined;
+  Two: undefined;
+  Three: undefined;
 }

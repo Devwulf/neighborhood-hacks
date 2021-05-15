@@ -5,7 +5,7 @@ import { Button, StyleSheet } from "react-native";
 import { Text, View } from "../../components/Themed";
 import { LoginParamList } from "../../types";
 
-type SignupNavProp = StackNavigationProp<LoginParamList, "Login">;
+type SignupNavProp = StackNavigationProp<LoginParamList, "Signup">;
 type Props = {
     navigation: SignupNavProp;
 }

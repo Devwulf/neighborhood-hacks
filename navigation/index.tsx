@@ -13,6 +13,7 @@ import { RootStackParamList } from "../types";
 import BottomTabNavigator from "./BottomTabNavigator";
 import LinkingConfiguration from "./LinkingConfiguration";
 import { LoginNavigator } from "./LoginNavigator";
+import { OnboardingNavigator } from "./OnboardingNavigator";
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
     // TODO: Fix color scheme before deploy
@@ -31,8 +32,8 @@ const Stack = createStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
     return (
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
-            <Stack.Screen name="Root" component={LoginNavigator} />
+        <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Login">
+            <Stack.Screen name="Login" component={LoginNavigator} />
             <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: "Oops!" }} />
         </Stack.Navigator>
     );

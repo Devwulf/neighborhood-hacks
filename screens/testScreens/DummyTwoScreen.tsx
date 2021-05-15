@@ -3,28 +3,27 @@ import * as React from "react";
 import { Button, StyleSheet } from "react-native";
 
 import { Text, View } from "../../components/Themed";
-import { LoginParamList } from "../../types";
+import { OnboardingParamList } from "../../types";
 
-type LoginNavProp = StackNavigationProp<LoginParamList, "Login">;
+type OnboardingNavProp = StackNavigationProp<OnboardingParamList, "Two">;
 type Props = {
-    navigation: LoginNavProp;
+    navigation: OnboardingNavProp;
 }
 
-export default function DummyLoginScreen(props: Props) {
+export default function DummyTwoScreen(props: Props) {
     const { navigation } = props;
-    const goToSignup = () => {
-        navigation.navigate("Signup");
+    const goToNext = () => {
+        navigation.navigate("Three");
     };
-
-    const goToOnboarding = () => {
-        navigation.navigate("Onboarding");
+    const goToBack = () => {
+        navigation.navigate("One");
     };
 
     return (
         <View style={styles.container}>
-            <Text>Login</Text>
-            <Button title="Sign Up" onPress={goToSignup} />
-            <Button title="Onboarding" onPress={goToOnboarding} />
+            <Text>Two</Text>
+            <Button title="Back" onPress={goToBack} />
+            <Button title="Next" onPress={goToNext} />
         </View>
     );
 }
