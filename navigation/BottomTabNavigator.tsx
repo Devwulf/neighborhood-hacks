@@ -24,7 +24,7 @@ import OwnerDetails from "../screens/OwnerDetails";
 import { BottomTabParamList, TabOneParamList, TabTwoParamList } from "../types";
 import Landing from "../screens/Landing"
 import Homescreen from "../screens/Homescreen";
-import ServicesOffered from "../screens/Location";
+import ServicesOffered from "../screens/ServicesOffered";
 import Register from "../screens/Register";
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -37,7 +37,7 @@ export default function BottomTabNavigator() {
             tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
             <BottomTab.Screen
                 name="TabOne"
-                component={OwnerDetails}
+                component={ServicesOffered}
                 options={{
                     tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
                 }}
