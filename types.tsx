@@ -35,3 +35,11 @@ export type OnboardingParamList = {
   Business: undefined;
   Customer: undefined;
 }
+
+export type BusinessWizardParamList = {
+  Details: undefined;
+  Services: undefined;
+  Location: undefined;
+  Specialty: undefined;
+  AllSet: undefined;
+}
