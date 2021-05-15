@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-        fontFamily: "DM-Sans" ,
+        fontFamily: "DM-Sans",
         paddingHorizontal: "20%",
         paddingVertical: "10%"
     },

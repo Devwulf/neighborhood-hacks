@@ -1,6 +1,7 @@
 import { StackNavigationProp } from "@react-navigation/stack";
 import * as React from "react";
 import { StyleSheet, View ,Image,Text, TouchableOpacity } from "react-native";
+import { NextButton } from "../components/Themed";
 import { OnboardingParamList } from "../types";
 //import onBoarding2 from "../assets/onBoarding2.png";
 // import { View } from "../components/Themed";
@@ -27,9 +28,7 @@ export default function Onboarding2(props: Props) {
             </Text>
             <Image style={styles.imagebottom} source={require("../assets/Vector2.png")}/>
             <View style={styles.imageNextContainer}>
-                <TouchableOpacity onPress={next}>
-                    <Image style={styles.imagenext} source={require("../assets/next.png")}/>
-                </TouchableOpacity>
+                <NextButton onPress={next} />
             </View>
         </View>
     );

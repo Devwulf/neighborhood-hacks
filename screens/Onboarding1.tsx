@@ -2,6 +2,7 @@ import { StackNavigationProp } from "@react-navigation/stack";
 import * as React from "react";
 import { StyleSheet, View ,Image,Text } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import { NextButton } from "../components/Themed";
 import { OnboardingParamList } from "../types";
 // import { View } from "../components/Themed";
 
@@ -28,9 +29,7 @@ export default function Onboarding1(props: Props) {
             </View>
             <Image style={styles.imagebottom} source={require("../assets/Vector2.png")}/>
             <View style={styles.imageNextContainer}>
-                <TouchableOpacity onPress={next}>
-                    <Image style={styles.imagenext} source={require("../assets/next.png")}/>
-                </TouchableOpacity>
+                <NextButton onPress={next} />
             </View>
         </View>
     );

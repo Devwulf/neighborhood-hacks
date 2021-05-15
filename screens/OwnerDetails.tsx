@@ -1,53 +1,76 @@
 import * as React from "react";
-import { StyleSheet ,Image,Text,View,TextInput ,Button,ScrollView} from "react-native";
+import { StyleSheet ,Image,ScrollView} from "react-native";
+import { Text, View, TextInput, Button, NextButton } from "../components/Themed";
 import {useState} from "react";
+import { BusinessWizardParamList } from "../types";
+import { StackNavigationProp } from "@react-navigation/stack";
 
-export default function OwnerDetails() {
-    const [text,setText]=useState('');
+
+type NavProp = StackNavigationProp<BusinessWizardParamList, "Details">;
+
+type Props = {
+    navigation: NavProp;
+}
+
+export default function OwnerDetails(props: Props) {
+    const { navigation } = props;
+    const next = () => {
+        navigation.navigate("Services");
+    };
+
+    const [text,setText]=useState("");
     return (
         <View style={styles.container}>
-            <Image style={styles.imagetop} source={require('../assets/Vector1.png')}/>
-           
+            <Image style={styles.imagetop} source={require("../assets/Vector1.png")}/>
+
             <ScrollView style={styles.form} >
-                <Text >
+                <Text>
                     <h1>
-                        Let Customers know more about your Business
+                        Let customers know more about your business
                     </h1>
                 </Text>
                 <View style={styles.formcomponent}>
-                    <Text>
-                        Email-address
+                    <Text style={{marginBottom: "0.25rem"}}>
+                        Email Address
                     </Text>
-                    <TextInput autoCompleteType="off" style={styles.textinput} placeholder='Enter valid email-id' onChangeText={text=>setText(text)}/>
+                    <TextInput autoCompleteType="email" textContentType="emailAddress" placeholder='Enter your email...' onChangeText={text=>setText(text)}/>
                 </View>
                 <View style={styles.formcomponent}>
-                    <Text>
+                    <Text style={{marginBottom: "0.25rem"}}>
                         Name
                     </Text>
-                    <TextInput autoCompleteType="off" style={styles.textinput} placeholder='Enter valid email-id' onChangeText={text=>setText(text)}/>
+                    <TextInput placeholder='Enter your name...' onChangeText={text=>setText(text)}/>
                 </View>
                 <View style={styles.formcomponent}>
-                    <Text>
+                    <Text style={{marginBottom: "0.25rem"}}>
                         Business-Name
                     </Text>
-                    <TextInput autoCompleteType="off" style={styles.textinput} placeholder='Enter your Name' onChangeText={text=>setText(text)}/>
+                    <TextInput placeholder='Enter your business name...' onChangeText={text=>setText(text)}/>
                 </View>
                 <View style={styles.formcomponent}>
-                    <Text>
+                    <Text style={{marginBottom: "0.25rem"}}>
                         Business Launch Date
                     </Text>
-                    <TextInput autoCompleteType="off" style={styles.textinput} placeholder='Business Launch Date' onChangeText={text=>setText(text)}/>
+                    <TextInput placeholder='Enter your launch date...' onChangeText={text=>setText(text)}/>
                 </View>
                 <View style={styles.formcomponent}>
-                    <Text>
+                    <Text style={{marginBottom: "0.25rem"}}>
                         Social Media Links
                     </Text>
-                    <TextInput autoCompleteType="off" style={styles.textinput} placeholder='Instagram' onChangeText={text=>setText(text)}/>
-                    <TextInput autoCompleteType="off" style={styles.textinput} placeholder='Facebook' onChangeText={text=>setText(text)}/>
-                    <TextInput autoCompleteType="off" style={styles.textinput} placeholder='Twitter' onChangeText={text=>setText(text)}/>
+                    <View style={{marginBottom: "0.25rem"}}>
+                        <TextInput placeholder='Instagram' onChangeText={text=>setText(text)}/>
+                    </View>
+                    <View style={{marginBottom: "0.25rem"}}>
+                        <TextInput placeholder='Facebook' onChangeText={text=>setText(text)}/>
+                    </View>
+                    <View style={{marginBottom: "0.25rem"}}>
+                        <TextInput placeholder='Twitter' onChangeText={text=>setText(text)}/>
+                    </View>
                 </View>
             </ScrollView>
-            <Image style={styles.imagenext} source={require('../assets/next.png')}/>
+            <View style={styles.imageNextContainer}>
+                <NextButton onPress={next} />
+            </View>
             {/* <Image style={styles.imagebottom} source={require('../assets/Vector2.png')}/> */}
         </View>
     );
@@ -56,28 +79,40 @@ export default function OwnerDetails() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        fontFamily: "DM-Sans" ,
+        alignItems: "center",
+        justifyContent: "center",
+        fontFamily: "DM-Sans",
+        paddingHorizontal: "20%",
+        paddingVertical: "20%"
     },
-    textinput:{
-        height:"40px",
-        backgroundColor:"lightgrey",
-        width:"300px",
-        marginBottom:"10px"
+    logo:{
+        width:"200px",
+        height:"100px",
     },
     form:{
-        marginLeft:"40px",
-        // position: 'absolute',
-        // top:"130px",
-
+        flex: 1,
+        width:"100%",
+        backgroundColor:"transparent"
+    },
+    textinput:{
+        height: "40px",
+        backgroundColor: "lightgrey",
+        width: "100%"
+    },
+    formcomponent:{
+        marginVertical: "0.5rem",
+        width: "100%"
     },
     imagetop:{
-        width:"130px",
-        height:"150px",
+        width:"165px",
+        height:"251px",
+        position: "absolute",
         top:"0px",
         left:"0px",
     },
-    formcomponent:{
-        margin:"10px"
+    icon:{
+        width:"35px",
+        height:"35px",
     },
     imagebottom:{
         width:"165px",
@@ -87,13 +122,22 @@ const styles = StyleSheet.create({
         right:"0px",
         float:"right", 
     },
+    link:{
+        color:"blue"
+    },
+    fullMarginBot: {
+        width: "100%", 
+        marginBottom: "1rem"
+    },
     imagenext:{
         width:"50px",
         height:"50px",
-        position:"absolute",
-        bottom:"30px",
-        right:"10px",
         backgroundColor:"black",
         borderRadius:50,
     },
+    imageNextContainer: {
+        position:"absolute",
+        bottom:"30px",
+        right:"30px",
+    }
 });
