@@ -1,17 +1,17 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { LoginParamList } from "../types";
-import DummyLoginScreen from "../screens/testScreens/DummyLoginScreen";
-import DummySignupScreen from "../screens/testScreens/DummySignupScreen";
 import { OnboardingNavigator } from "./OnboardingNavigator";
+import Login from "../screens/Login";
+import Register from "../screens/Register";
 
 const Stack = createStackNavigator<LoginParamList>();
 
 export function LoginNavigator() {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Login">
-            <Stack.Screen name="Login" component={DummyLoginScreen} />
-            <Stack.Screen name="Signup" component={DummySignupScreen} />
+            <Stack.Screen name="Login" component={Login} />
+            <Stack.Screen name="Signup" component={Register} />
             <Stack.Screen name="Onboarding" component={OnboardingNavigator} />
         </Stack.Navigator>
     );
