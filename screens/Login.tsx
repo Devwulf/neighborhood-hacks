@@ -41,7 +41,7 @@ export default function Login(props: Props) {
                 <Image style={styles.logo} source={require("../assets/logo.png")}/>
                 <View style={{width: "100%"}}>
                     <Text>
-                        <h1>Sign-In</h1> 
+                        <h1>Sign In</h1> 
                     </Text>
                 </View>
                 <View style={styles.formcomponent}>
@@ -61,7 +61,7 @@ export default function Login(props: Props) {
                 </Text>
                 <Button text="Login" onPress={login} />
                 <Text style={{marginVertical: "1rem"}}>
-                   Don't have an account? 
+                    Don't have an account?&thinsp;
                     <TouchableOpacity onPress={signup}>
                         <Text style={styles.link}>
                             Sign up!
