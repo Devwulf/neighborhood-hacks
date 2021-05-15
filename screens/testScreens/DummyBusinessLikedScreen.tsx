@@ -3,28 +3,38 @@ import * as React from "react";
 import { Button, StyleSheet } from "react-native";
 
 import { Text, View } from "../../components/Themed";
-import { CustomerWizardParamList } from "../../types";
+import { BusinessParamList } from "../../types";
 
-type NavProp = StackNavigationProp<CustomerWizardParamList, "Services">;
+type NavProp = StackNavigationProp<BusinessParamList, "Liked">;
 type Props = {
     navigation: NavProp;
 }
 
-export default function DummyCustomerServicesScreen(props: Props) {
+export default function DummyBusinessLikedScreen(props: Props) {
     const { navigation } = props;
-    const goToBack = () => {
-        navigation.navigate("Location");
+    const goToHome = () => {
+        navigation.navigate("Home");
     };
     
-    const goToNext = () => {
+    const gotoLiked = () => {
         navigation.navigate("Liked");
+    };
+
+    const goToNotification = () => {
+        navigation.navigate("Notification");
+    };
+
+    const goToProfile = () => {
+        navigation.navigate("Profile");
     };
 
     return (
         <View style={styles.container}>
-            <Text>Services</Text>
-            <Button title="Back" onPress={goToBack} />
-            <Button title="Next" onPress={goToNext} />
+            <Text>Liked</Text>
+            <Button title="Home" onPress={goToHome} />
+            <Button title="Liked" onPress={gotoLiked} />
+            <Button title="Notification" onPress={goToNotification} />
+            <Button title="Profile" onPress={goToProfile} />
         </View>
     );
 }

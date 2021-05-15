@@ -3,22 +3,27 @@ import * as React from "react";
 import { Button, StyleSheet } from "react-native";
 
 import { Text, View } from "../../components/Themed";
-import { BusinessWizardParamList } from "../../types";
+import { CustomerWizardParamList } from "../../types";
 
-type NavProp = StackNavigationProp<BusinessWizardParamList, "Details">;
+type NavProp = StackNavigationProp<CustomerWizardParamList, "Location">;
 type Props = {
     navigation: NavProp;
 }
 
-export default function DummyBusinessDetailsScreen(props: Props) {
+export default function DummyCustomerWizLocationScreen(props: Props) {
     const { navigation } = props;
+    const goToBack = () => {
+        navigation.navigate("Details");
+    };
+    
     const goToNext = () => {
         navigation.navigate("Services");
     };
 
     return (
         <View style={styles.container}>
-            <Text>Details</Text>
+            <Text>Location</Text>
+            <Button title="Back" onPress={goToBack} />
             <Button title="Next" onPress={goToNext} />
         </View>
     );

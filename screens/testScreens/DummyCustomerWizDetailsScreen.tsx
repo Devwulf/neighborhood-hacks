@@ -5,25 +5,21 @@ import { Button, StyleSheet } from "react-native";
 import { Text, View } from "../../components/Themed";
 import { CustomerWizardParamList } from "../../types";
 
-type NavProp = StackNavigationProp<CustomerWizardParamList, "Location">;
+type NavProp = StackNavigationProp<CustomerWizardParamList, "Details">;
 type Props = {
     navigation: NavProp;
 }
 
-export default function DummyCustomerLocationScreen(props: Props) {
+export default function DummyCustomerWizDetailsScreen(props: Props) {
     const { navigation } = props;
-    const goToBack = () => {
-        navigation.navigate("Details");
-    };
     
     const goToNext = () => {
-        navigation.navigate("Services");
+        navigation.navigate("Location");
     };
 
     return (
         <View style={styles.container}>
-            <Text>Location</Text>
-            <Button title="Back" onPress={goToBack} />
+            <Text>Details</Text>
             <Button title="Next" onPress={goToNext} />
         </View>
     );

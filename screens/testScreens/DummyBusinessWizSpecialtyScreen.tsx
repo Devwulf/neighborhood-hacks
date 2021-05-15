@@ -3,23 +3,28 @@ import * as React from "react";
 import { Button, StyleSheet } from "react-native";
 
 import { Text, View } from "../../components/Themed";
-import { CustomerWizardParamList } from "../../types";
+import { BusinessWizardParamList } from "../../types";
 
-type NavProp = StackNavigationProp<CustomerWizardParamList, "AllSet">;
+type NavProp = StackNavigationProp<BusinessWizardParamList, "Specialty">;
 type Props = {
     navigation: NavProp;
 }
 
-export default function DummyCustomerAllSetScreen(props: Props) {
+export default function DummyBusinessWizSpecialtyScreen(props: Props) {
     const { navigation } = props;
     const goToBack = () => {
-        navigation.navigate("Liked");
+        navigation.navigate("Location");
+    };
+
+    const goToNext = () => {
+        navigation.navigate("AllSet");
     };
 
     return (
         <View style={styles.container}>
-            <Text>All Set</Text>
+            <Text>Specialty</Text>
             <Button title="Back" onPress={goToBack} />
+            <Button title="Next" onPress={goToNext} />
         </View>
     );
 }

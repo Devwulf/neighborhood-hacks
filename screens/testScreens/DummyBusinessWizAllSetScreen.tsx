@@ -10,16 +10,21 @@ type Props = {
     navigation: NavProp;
 }
 
-export default function DummyBusinessAllSetScreen(props: Props) {
+export default function DummyBusinessWizAllSetScreen(props: Props) {
     const { navigation } = props;
     const goToBack = () => {
         navigation.navigate("Specialty");
+    };
+
+    const goToNext = () => {
+        navigation.navigate("Business");
     };
 
     return (
         <View style={styles.container}>
             <Text>All Set</Text>
             <Button title="Back" onPress={goToBack} />
+            <Button title="Next" onPress={goToNext} />
         </View>
     );
 }

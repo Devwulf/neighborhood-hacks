@@ -1,10 +1,10 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import React from "react";
-import DummyCustomerAllSetScreen from "../screens/testScreens/DummyCustomerAllSetScreen";
-import DummyCustomerDetailsScreen from "../screens/testScreens/DummyCustomerDetailsScreen";
-import DummyCustomerLikedScreen from "../screens/testScreens/DummyCustomerLikedScreen";
-import DummyCustomerLocationScreen from "../screens/testScreens/DummyCustomerLocationScreen";
-import DummyCustomerServicesScreen from "../screens/testScreens/DummyCustomerServicesScreen";
+import DummyCustomerWizAllSetScreen from "../screens/testScreens/DummyCustomerWizAllSetScreen";
+import DummyCustomerWizDetailsScreen from "../screens/testScreens/DummyCustomerWizDetailsScreen";
+import DummyCustomerWizLikedScreen from "../screens/testScreens/DummyCustomerWizLikedScreen";
+import DummyCustomerWizLocationScreen from "../screens/testScreens/DummyCustomerWizLocationScreen";
+import DummyCustomerWizServicesScreen from "../screens/testScreens/DummyCustomerWizServicesScreen";
 import { CustomerWizardParamList } from "../types";
 
 const Stack = createStackNavigator<CustomerWizardParamList>();
@@ -12,11 +12,11 @@ const Stack = createStackNavigator<CustomerWizardParamList>();
 export function CustomerWizardNavigator() {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Details">
-            <Stack.Screen name="Details" component={DummyCustomerDetailsScreen} />
-            <Stack.Screen name="Location" component={DummyCustomerLocationScreen} />
-            <Stack.Screen name="Services" component={DummyCustomerServicesScreen} />
-            <Stack.Screen name="Liked" component={DummyCustomerLikedScreen} />
-            <Stack.Screen name="AllSet" component={DummyCustomerAllSetScreen} />
+            <Stack.Screen name="Details" component={DummyCustomerWizDetailsScreen} />
+            <Stack.Screen name="Location" component={DummyCustomerWizLocationScreen} />
+            <Stack.Screen name="Services" component={DummyCustomerWizServicesScreen} />
+            <Stack.Screen name="Liked" component={DummyCustomerWizLikedScreen} />
+            <Stack.Screen name="AllSet" component={DummyCustomerWizAllSetScreen} />
         </Stack.Navigator>
     );
 }

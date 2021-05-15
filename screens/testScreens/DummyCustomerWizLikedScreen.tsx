@@ -10,7 +10,7 @@ type Props = {
     navigation: NavProp;
 }
 
-export default function DummyCustomerLikedScreen(props: Props) {
+export default function DummyCustomerWizLikedScreen(props: Props) {
     const { navigation } = props;
     const goToBack = () => {
         navigation.navigate("Services");

@@ -42,6 +42,7 @@ export type BusinessWizardParamList = {
   Location: undefined;
   Specialty: undefined;
   AllSet: undefined;
+  Business: undefined;
 }
 
 export type CustomerWizardParamList = {
@@ -50,4 +51,11 @@ export type CustomerWizardParamList = {
   Services: undefined;
   Liked: undefined;
   AllSet: undefined;
+}
+
+export type BusinessParamList = {
+  Home: undefined;
+  Liked: undefined;
+  Notification: undefined;
+  Profile: undefined;
 }
