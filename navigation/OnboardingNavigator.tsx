@@ -6,6 +6,7 @@ import DummyThreeScreen from "../screens/testScreens/DummyThreeScreen";
 import DummyTwoScreen from "../screens/testScreens/DummyTwoScreen";
 import { OnboardingParamList } from "../types";
 import { BusinessWizardNavigator } from "./BusinessWizardNavigator";
+import { CustomerWizardNavigator } from "./CustomerWizardNavigator";
 
 const Stack = createStackNavigator<OnboardingParamList>();
 
@@ -17,7 +18,7 @@ export function OnboardingNavigator() {
             <Stack.Screen name="Three" component={DummyThreeScreen} />
             <Stack.Screen name="Choice" component={DummyChoiceScreen} />
             <Stack.Screen name="Business" component={BusinessWizardNavigator} />
-            
+            <Stack.Screen name="Customer" component={CustomerWizardNavigator} />
         </Stack.Navigator>
     );
 }
