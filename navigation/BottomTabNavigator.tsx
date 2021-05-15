@@ -10,14 +10,16 @@ import * as React from "react";
 
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
+import Onboarding from "../screens/Onboarding";
 import TabOneScreen from "../screens/TabOneScreen";
 import TabTwoScreen from "../screens/TabTwoScreen";
+import Template from "../screens/Template";
 import { BottomTabParamList, TabOneParamList, TabTwoParamList } from "../types";
 import Landing from "../screens/Landing"
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
 export default function BottomTabNavigator() {
-    const colorScheme = useColorScheme();
+    const colorScheme = /*useColorScheme()*/ "light"; // TODO: Fix before deploy
 
     return (
         <BottomTab.Navigator
@@ -70,8 +72,8 @@ function TabTwoNavigator() {
         <TabTwoStack.Navigator>
             <TabTwoStack.Screen
                 name="TabTwoScreen"
-                component={TabTwoScreen}
-                options={{ headerTitle: "Tab Two Title" }}
+                component={Template}
+                options={{ headerTitle: "Template" }}
             />
         </TabTwoStack.Navigator>
     );
