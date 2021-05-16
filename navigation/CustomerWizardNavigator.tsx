@@ -5,12 +5,12 @@ import React from "react";
 import DummyCustomerWizLikedScreen from "../screens/testScreens/DummyCustomerWizLikedScreen";
 // import DummyCustomerWizLocationScreen from "../screens/testScreens/DummyCustomerWizLocationScreen";
 // import DummyCustomerWizServicesScreen from "../screens/testScreens/DummyCustomerWizServicesScreen";
-import Customerdetails from "../screens/CustomerScreens/Customerdetails"
-import CustomerInterests from "../screens/CustomerScreens/CustomerInterests"
-import CustomerLocation from "../screens/CustomerScreens/CustomerLocation"
-import OwnerendScreen from "../screens/OwnerendScreen"
+import Customerdetails from "../screens/CustomerScreens/Customerdetails";
+import CustomerInterests from "../screens/CustomerScreens/CustomerInterests";
+import CustomerLocation from "../screens/CustomerScreens/CustomerLocation";
 import { CustomerWizardParamList } from "../types";
 import { CustomerNavigator } from "./CustomerNavigator";
+import CustomerEndScreen from "../screens/CustomerScreens/CustomerEndScreen";
 
 const Stack = createStackNavigator<CustomerWizardParamList>();
 
@@ -21,7 +21,7 @@ export function CustomerWizardNavigator() {
             <Stack.Screen name="Location" component={CustomerLocation} />
             <Stack.Screen name="Interests" component={CustomerInterests} />
             <Stack.Screen name="Liked" component={DummyCustomerWizLikedScreen} />
-            <Stack.Screen name="AllSet" component={OwnerendScreen} />
+            <Stack.Screen name="AllSet" component={CustomerEndScreen} />
             <Stack.Screen name="Customer" component={CustomerNavigator} />
         </Stack.Navigator>
     );
