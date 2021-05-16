@@ -1,9 +1,9 @@
 import { useRoute } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import * as React from "react";
-import { Button, StyleSheet } from "react-native";
+import { Button, StyleSheet ,ScrollView} from "react-native";
 import { NavBar } from "../../components/NavBar";
-
+import Card from "../../components/Card"
 import { Text, View } from "../../components/Themed";
 import { BusinessParamList } from "../../types";
 
@@ -34,7 +34,16 @@ export default function BusinessNotificationScreen(props: Props) {
 
     return (
         <View style={styles.container}>
-            <Text>Notification</Text>
+            <ScrollView>
+                <Card img={require('../../assets/1.png')} data="Thank you for joining #Locals!!.
+                Let’s make an impact together."/>
+                <Card img={require('../../assets/2.png')} data="@DannySum started following
+your business! How exciting!"/>
+                <Card img={require('../../assets/3.png')} data="Congratulations, You’ve won the best local business award!! "/>
+                <Card img={require('../../assets/4.png')} data="Hooray!
+You’ve reached 3K customers!"/>
+                <Text style={styles.text} >Delete all</Text>
+            </ScrollView>
             <NavBar 
                 currentScreen={route.name} 
                 onHomePressed={goToHome} 
@@ -60,5 +69,9 @@ const styles = StyleSheet.create({
         marginVertical: 30,
         height: 1,
         width: "80%",
+    },
+    text:{
+        display:"flex",
+        flexDirection:"row-reverse",
     },
 });

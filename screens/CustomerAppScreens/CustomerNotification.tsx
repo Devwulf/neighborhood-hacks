@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     },
     text:{
         display:"flex",
-        flexDirection:"row-reverse",
+        flexDirection:"row-reverse"
     },
     
 });
