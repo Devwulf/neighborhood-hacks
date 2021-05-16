@@ -6,7 +6,7 @@ import { NextButton, TextInput } from "../components/Themed";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { BusinessWizardParamList } from "../types";
 
-type NavProp = StackNavigationProp<BusinessWizardParamList, "Location">;
+type NavProp = StackNavigationProp<BusinessWizardParamList, "Specialty">;
 type Props = {
     navigation: NavProp;
 }

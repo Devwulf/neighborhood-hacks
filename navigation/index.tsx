@@ -12,6 +12,7 @@ import NotFoundScreen from "../screens/NotFoundScreen";
 import ServicesOffered from "../screens/ServicesOffered";
 import { RootStackParamList } from "../types";
 import BottomTabNavigator from "./BottomTabNavigator";
+import { BusinessWizardNavigator } from "./BusinessWizardNavigator";
 import LinkingConfiguration from "./LinkingConfiguration";
 import { LoginNavigator } from "./LoginNavigator";
 import { OnboardingNavigator } from "./OnboardingNavigator";
