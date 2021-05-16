@@ -7,12 +7,12 @@ import { NavBar } from "../../components/NavBar";
 import { Text, View } from "../../components/Themed";
 import { BusinessParamList } from "../../types";
 
-type NavProp = StackNavigationProp<BusinessParamList, "Profile">;
+type NavProp = StackNavigationProp<BusinessParamList, "Home">;
 type Props = {
     navigation: NavProp;
 }
 
-export default function BusinessProfileScreen(props: Props) {
+export default function BusinessHomeScreen(props: Props) {
     const { navigation } = props;
     const goToHome = () => {
         navigation.navigate("Home");
@@ -34,8 +34,7 @@ export default function BusinessProfileScreen(props: Props) {
 
     return (
         <View style={styles.container}>
-            <Text>Profile</Text>
-            
+            <Text>Home</Text>
             <NavBar 
                 currentScreen={route.name} 
                 onHomePressed={goToHome} 
