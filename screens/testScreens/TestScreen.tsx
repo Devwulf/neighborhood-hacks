@@ -1,12 +1,12 @@
 import { StackNavigationProp } from "@react-navigation/stack";
 import * as React from "react";
 import {useState} from "react";
-import { StyleSheet ,Image, Alert} from "react-native";
+import { StyleSheet ,Image, Alert, ScrollView} from "react-native";
 import { Text, View, TextInput, Button } from "../../components/Themed";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { LoginParamList } from "../../types";
 import { Hashtags } from "../../components/Hashtags";
-import NavBar from "../../components/NavBar";
+import { NavBar } from "../../components/NavBar";
 
 type NavProp = StackNavigationProp<LoginParamList, "Test">;
 type Props = {
@@ -26,7 +26,47 @@ export default function TestScreen(props: Props) {
                 <Button text="back" onPress={back} />
             </View>
 
-            <NavBar />
+            <ScrollView>
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+                <Text>sdds</Text>
+
+                <Text>sdds</Text>
+            </ScrollView>
+            <NavBar currentScreen="Home" />
         </View>
     );
 }
@@ -34,6 +74,7 @@ export default function TestScreen(props: Props) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        height: "100vh"
     },
     logo:{
         width:"200px",

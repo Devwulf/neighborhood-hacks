@@ -59,7 +59,7 @@ export default function ServicesOffered(props: Props) {
                 </View>
             </View>
             <View style={{marginBottom: "1rem", width: "100%"}}>
-                <Text style={{fontSize: "20px", fontWeight: "600"}}>Food</Text>
+                <Text style={{fontSize: 20, fontWeight: "600"}}>Food</Text>
             </View>
             <View style={{marginBottom: "1rem"}}>
                 <Hashtags tags={foodItems1} />
@@ -67,7 +67,7 @@ export default function ServicesOffered(props: Props) {
                 <Hashtags tags={foodItems3} />
             </View>
             <View style={{marginBottom: "1rem", width: "100%"}}>
-                <Text style={{fontSize: "20px", fontWeight: "600"}}>Apparel</Text>
+                <Text style={{fontSize: 20, fontWeight: "600"}}>Apparel</Text>
             </View>
             <View style={{marginBottom: "1rem"}}>
                 <Hashtags tags={apparel1} />
@@ -75,7 +75,7 @@ export default function ServicesOffered(props: Props) {
                 <Hashtags tags={apparel3} />
             </View>
             <View style={{marginBottom: "1rem", width: "100%"}}>
-                <Text style={{fontSize: "20px", fontWeight: "600"}}>Entertainment</Text>
+                <Text style={{fontSize: 20, fontWeight: "600"}}>Entertainment</Text>
             </View>
             <View style={{marginBottom: "4rem"}}>
                 <Hashtags tags={entertainment1} />

@@ -12,7 +12,9 @@ import NotFoundScreen from "../screens/NotFoundScreen";
 import ServicesOffered from "../screens/ServicesOffered";
 import { RootStackParamList } from "../types";
 import BottomTabNavigator from "./BottomTabNavigator";
+import { BusinessNavigator } from "./BusinessNavigator";
 import { BusinessWizardNavigator } from "./BusinessWizardNavigator";
+import { CustomerNavigator } from "./CustomerNavigator";
 import LinkingConfiguration from "./LinkingConfiguration";
 import { LoginNavigator } from "./LoginNavigator";
 import { OnboardingNavigator } from "./OnboardingNavigator";
@@ -35,7 +37,7 @@ const Stack = createStackNavigator<RootStackParamList>();
 function RootNavigator() {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Login">
-            <Stack.Screen name="Login" component={LoginNavigator} />
+            <Stack.Screen name="Login" component={CustomerNavigator} />
             <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: "Oops!" }} />
         </Stack.Navigator>
     );

@@ -5,6 +5,7 @@ import { StyleSheet ,Image, Alert} from "react-native";
 import { Text, View, TextInput, Button } from "../components/Themed";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { LoginParamList } from "../types";
+import { useRoute } from "@react-navigation/core";
 
 type LoginNavProp = StackNavigationProp<LoginParamList, "Login">;
 type Props = {
@@ -33,7 +34,7 @@ export default function Login(props: Props) {
     const fbLogin = () => {
         navigation.navigate("Test");
     };
-
+    
     return (
         <View style={styles.container}>
             <Image style={styles.imagetop} source={require("../assets/Vector1.png")}/>
