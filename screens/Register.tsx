@@ -4,6 +4,7 @@ import {useState} from "react";
 import { StyleSheet,Image,Alert, TouchableOpacity} from "react-native";
 import { Text, View, TextInput, Button } from "../components/Themed"; 
 import { LoginParamList } from "../types";
+import AuthManager from "../utils/AuthManager";
 
 type NavProp = StackNavigationProp<LoginParamList, "Login">;
 type Props = {
@@ -19,6 +20,24 @@ export default function Register(props: Props) {
     const login = () => {
         // TODO: Login to backend
         navigation.navigate("Login");
+    };
+
+    const signup = () => {
+        AuthManager.register(text, email, password)
+            .then(async response => {
+                const data = await response.json();
+                if (!response.ok) {
+                    const error = (data && data.message) || response.status;
+                    setText("");
+                    setPassword("");
+                    return Promise.reject(error);
+                }
+                
+                navigation.navigate("Login");
+            })
+            .catch(error => {
+                console.error("There was an error!", error);
+            });
     };
 
     return (
@@ -47,7 +66,7 @@ export default function Register(props: Props) {
                     <TextInput secureTextEntry={true} placeholder='Enter Password' onChangeText={text=>setPassword(text)}/>
                 </View>
                 <View style={{width: "100%", marginVertical: "1rem"}}>
-                    <Button text="Create Account" onPress={() => Alert.alert("Simple Button pressed")}/>
+                    <Button text="Create Account" onPress={signup}/>
                 </View>
                 <Text style={{marginVertical: "1rem"}}>
                     Already have an account?&nbsp;

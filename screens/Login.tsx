@@ -6,6 +6,7 @@ import { Text, View, TextInput, Button } from "../components/Themed";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { LoginParamList } from "../types";
 import { useRoute } from "@react-navigation/core";
+import AuthManager from "../utils/AuthManager";
 
 type LoginNavProp = StackNavigationProp<LoginParamList, "Login">;
 type Props = {
@@ -19,7 +20,22 @@ export default function Login(props: Props) {
 
     const login = () => {
         // TODO: Login to backend
-        navigation.navigate("Onboarding");
+        AuthManager.login(text, password)
+            .then(async response => {
+                const data = await response.json();
+                if (!response.ok) {
+                    const error = (data && data.message) || response.status;
+                    setText("");
+                    setPassword("");
+                    return Promise.reject(error);
+                }
+                Alert.alert("You are now logged in!");
+                AuthManager.authToken = data.jwt;
+                navigation.navigate("Onboarding");
+            })
+            .catch(error => {
+                console.error("There was an error!", error);
+            });
     };
 
     const signup = () => {
@@ -32,7 +48,7 @@ export default function Login(props: Props) {
     };
 
     const fbLogin = () => {
-        navigation.navigate("Test");
+        
     };
     
     return (
