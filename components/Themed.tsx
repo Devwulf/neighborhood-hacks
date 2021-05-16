@@ -4,9 +4,9 @@
  */
 
 import * as React from "react";
-import { StyleProp } from "react-native";
+import { NativeScrollEvent, NativeSyntheticEvent, StyleProp } from "react-native";
 import { StyleSheet, Text as DefaultText, View as DefaultView, TextInput as DefaultTextInput, Button as DefaultButton, ViewStyle, Image } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
@@ -94,7 +94,6 @@ const styles = StyleSheet.create({
         width: "100%",
         height: "48px",
         backgroundColor: "black",
-        marginVertical: "1rem",
         borderRadius: 8
     },
     imagenext:{
@@ -102,5 +101,5 @@ const styles = StyleSheet.create({
         height:"50px",
         backgroundColor:"black",
         borderRadius:50,
-    },
+    }
 });

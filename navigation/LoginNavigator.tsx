@@ -4,6 +4,7 @@ import { LoginParamList } from "../types";
 import { OnboardingNavigator } from "./OnboardingNavigator";
 import Login from "../screens/Login";
 import Register from "../screens/Register";
+import TestScreen from "../screens/testScreens/TestScreen";
 
 const Stack = createStackNavigator<LoginParamList>();
 
@@ -13,6 +14,7 @@ export function LoginNavigator() {
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="Signup" component={Register} />
             <Stack.Screen name="Onboarding" component={OnboardingNavigator} />
+            <Stack.Screen name="Test" component={TestScreen} />
         </Stack.Navigator>
     );
 }

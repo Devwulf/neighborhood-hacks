@@ -25,6 +25,7 @@ export type LoginParamList = {
   Login: undefined;
   Signup: undefined;
   Onboarding: undefined;
+  Test: undefined;
 }
 
 export type OnboardingParamList = {

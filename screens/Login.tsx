@@ -31,7 +31,7 @@ export default function Login(props: Props) {
     };
 
     const fbLogin = () => {
-
+        navigation.navigate("Test");
     };
 
     return (
@@ -59,7 +59,10 @@ export default function Login(props: Props) {
                 <Text style={{width: "100%", marginVertical: "1rem", display:"flex", flexDirection: "row-reverse"}}>
                    Forgot Password?
                 </Text>
-                <Button text="Login" onPress={login} />
+                
+                <View style={{width: "100%", marginVertical: "1rem"}}>
+                    <Button text="Login" onPress={login} />
+                </View>
                 <Text style={{marginVertical: "1rem"}}>
                     Don't have an account?&thinsp;
                     <TouchableOpacity onPress={signup}>

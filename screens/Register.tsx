@@ -46,7 +46,9 @@ export default function Register(props: Props) {
                     </Text>
                     <TextInput secureTextEntry={true} placeholder='Enter Password' onChangeText={text=>setPassword(text)}/>
                 </View>
-                <Button text="Create Account" onPress={() => Alert.alert("Simple Button pressed")}/>
+                <View style={{width: "100%", marginVertical: "1rem"}}>
+                    <Button text="Create Account" onPress={() => Alert.alert("Simple Button pressed")}/>
+                </View>
                 <Text style={{marginVertical: "1rem"}}>
                     Already have an account?&nbsp;
                     <TouchableOpacity onPress={login}>

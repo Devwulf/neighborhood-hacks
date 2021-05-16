@@ -32,8 +32,12 @@ export default function Onboarding1(props: Props) {
                 <View>
                     <Text><h3>Are you a</h3></Text>
                     
-                    <Button text="Business Owner" onPress={business} />
-                    <Button text="Customer" onPress={customer} />
+                    <View style={{width: "100%", marginTop: "1rem", marginBottom: "0.25rem"}}>
+                        <Button text="Business Owner" onPress={business} />
+                    </View>
+                    <View style={{width: "100%", marginTop: "0.25rem", marginBottom: "1rem"}}>
+                        <Button text="Customer" onPress={customer} />
+                    </View>
                 </View>
             </View>
             
