@@ -11,6 +11,7 @@ const Stack = createStackNavigator<CustomerParamList>();
 export function CustomerNavigator() {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Home">
+            
             <Stack.Screen name="Home" component={DummyCustomerHomeScreen} />
             <Stack.Screen name="Liked" component={DummyCustomerLikedScreen} />
             <Stack.Screen name="Notification" component={DummyCustomerNotificationScreen} />

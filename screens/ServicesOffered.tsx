@@ -108,6 +108,7 @@ const styles=StyleSheet.create({
     },
     text:{
         width:"80%",
+        
 
     },
     form:{
