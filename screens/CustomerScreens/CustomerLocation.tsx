@@ -10,7 +10,7 @@ type Props = {
     navigation: NavProp;
 }
 
-export default function Location(props: Props) {
+export default function CustomerLocation(props: Props) {
     const { navigation } = props;
     const [text,setText]=useState("");
 

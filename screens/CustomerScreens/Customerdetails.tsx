@@ -12,7 +12,7 @@ type Props = {
     navigation: NavProp;
 }
 
-export default function OwnerDetails(props: Props) {
+export default function CustomerDetails(props: Props) {
     const { navigation } = props;
     const next = () => {
         navigation.navigate("Location");
