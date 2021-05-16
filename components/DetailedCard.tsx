@@ -20,7 +20,7 @@ export default function DetailedCard() {
                 <View style={styles.details}>
                     <Text style={styles.title}>"10% promotion for a week"</Text>
                     <Text style={styles.customerCount}>400 customers</Text>
-                    <Text style={styles.description}>Bakery is an American-style pastry kitchen established in 2004 to bring the bona fide taste of American home heating to London. The organization opened its first branch on Portobello Road in Notting Hill in 2007</Text>
+                    <Text style={styles.description} numberOfLines={4} ellipsizeMode="tail">Bakery is an American-style pastry kitchen established in 2004 to bring the bona fide taste of American home heating to London. The organization opened its first branch on Portobello Road in Notting Hill in 2007</Text>
                 </View>
                 <View style={styles.heartContainer}>
                     <TouchableOpacity onPress={() => setLiked(!liked)}>
@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        backgroundColor: "transparent",
         height: "13rem",
         width: "100vw"
     },
