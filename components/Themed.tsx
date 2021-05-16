@@ -4,7 +4,9 @@
  */
 
 import * as React from "react";
-import { Text as DefaultText, View as DefaultView } from "react-native";
+import { NativeScrollEvent, NativeSyntheticEvent, StyleProp } from "react-native";
+import { StyleSheet, Text as DefaultText, View as DefaultView, TextInput as DefaultTextInput, Button as DefaultButton, ViewStyle, Image } from "react-native";
+import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
@@ -30,6 +32,9 @@ type ThemeProps = {
 
 export type TextProps = ThemeProps & DefaultText["props"];
 export type ViewProps = ThemeProps & DefaultView["props"];
+export type TextInputProps = DefaultTextInput["props"];
+export type ButtonProps = {text: string, textColor?: string,} & TouchableOpacity["props"];
+export type NextButtonProps = TouchableOpacity["props"];
 
 export function Text(props: TextProps) {
     const { style, lightColor, darkColor, ...otherProps } = props;
@@ -44,3 +49,57 @@ export function View(props: ViewProps) {
 
     return <DefaultView style={[{ backgroundColor }, style]} {...otherProps} />;
 }
+
+export function TextInput(props: TextInputProps) {
+    const { ...otherProps } = props;
+    return (
+        <DefaultTextInput style={styles.textInput} {...otherProps} />
+    );
+}
+
+export function Button(props: ButtonProps) {
+    const { text, textColor, ...otherProps } = props;
+    return (
+        <View style={{width: "100%"}}>
+            <TouchableOpacity style={styles.button} {...otherProps}>
+                <Text style={{color: `${textColor ?? "white"}`}}>{text}</Text>
+            </TouchableOpacity>
+        </View>
+    );
+}
+
+export function NextButton(props: NextButtonProps) {
+    const { ...otherProps } = props;
+    return (
+        <TouchableOpacity {...otherProps}>
+            <Image style={styles.imagenext} source={require("../assets/next.png")}/>
+        </TouchableOpacity>
+    );
+}
+
+const styles = StyleSheet.create({
+    textInput: {
+        height: "48px",
+        width: "100%",
+        backgroundColor: "#ECF1F4",
+        color: "#8C8CA1",
+        borderRadius: 8,
+        shadowColor: "rgba(74, 74, 104, 0.1)",
+        paddingHorizontal: "1rem"
+    },
+    button: {
+        display:"flex",
+        alignItems:"center",
+        justifyContent:"center",
+        width: "100%",
+        height: "48px",
+        backgroundColor: "black",
+        borderRadius: 8
+    },
+    imagenext:{
+        width:"50px",
+        height:"50px",
+        backgroundColor:"black",
+        borderRadius:50,
+    }
+});

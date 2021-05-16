@@ -1,32 +1,50 @@
 import * as React from "react";
-import {StyleSheet,Text,Button,Alert,View,Image,TextInput} from "react-native"
-import { AntDesign } from '@expo/vector-icons';
+import {StyleSheet,Text,Button,Alert,View,Image} from "react-native";
+import { AntDesign } from "@expo/vector-icons";
 import {useState} from "react";
-export default function Speciality(){
-    const [text,setText]=useState('');
+import { NextButton, TextInput } from "../components/Themed";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { BusinessWizardParamList } from "../types";
+
+type NavProp = StackNavigationProp<BusinessWizardParamList, "Location">;
+type Props = {
+    navigation: NavProp;
+}
+
+export default function Speciality(props: Props) {
+    const { navigation } = props;
+    const [text,setText]=useState("");
+
+    const next = () => {
+        navigation.navigate("AllSet");
+    };
+
     return(
-    <View style={styles.container}>
-       <Image style={styles.imagetop} source={require('../assets/Vector1.png')}/>
-       <View style={styles.form}>
-            <Text style={styles.text}>
-                <h1>Tell us one speciality about your business?</h1>
-            </Text>
-            <TextInput   multiline style={styles.textinput}>
+        <View style={styles.container}>
+            <Image style={styles.imagetop} source={require("../assets/Vector1.png")}/>
+            <View style={styles.form}>
+                <Text style={styles.text}>
+                    <h1>Tell us one specialty about your business</h1>
+                </Text>
+                <TextInput multiline style={styles.textinput}>
                 
-            </TextInput>
+                </TextInput>
+            </View>
+            <Image style={styles.imagebottom} source={require("../assets/Vector2.png")}/>
+            
+            <View style={styles.imageNextContainer}>
+                <NextButton onPress={next} />
+            </View>
         </View>
-        <Image style={styles.imagebottom} source={require('../assets/Vector2.png')}/>
-        <Image style={styles.imagenext} source={require('../assets/next.png')}/>
-     </View>
    
     );
 }
 const styles=StyleSheet.create({
-      container:{   
-          flex:1,
-          backgroundColor:"white",
-      },
-      imagebottom:{
+    container:{   
+        flex:1,
+        backgroundColor:"white",
+    },
+    imagebottom:{
         width:"165px",
         height:"251px",
         position:"absolute",
@@ -56,8 +74,8 @@ const styles=StyleSheet.create({
         marginLeft:"40px",
         position:"absolute",
         top:"150px",
-        justifyContent: 'center',
-         alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
        
     },
     textinput:{
@@ -65,6 +83,9 @@ const styles=StyleSheet.create({
         width:"300px",
         backgroundColor:"#ECF1F4",
     },
-   
-    
+    imageNextContainer: {
+        position:"absolute",
+        bottom:"30px",
+        right:"30px",
+    }
 });

@@ -1,46 +1,87 @@
+import { StackNavigationProp } from "@react-navigation/stack";
 import * as React from "react";
-import {useState} from "react"
-import { StyleSheet ,Image,Text,View,TextInput ,Button,Alert} from "react-native";
+import {useState} from "react";
+import { StyleSheet ,Image, Alert} from "react-native";
+import { Text, View, TextInput, Button } from "../components/Themed";
+import { TouchableOpacity } from "react-native-gesture-handler";
+import { LoginParamList } from "../types";
 
-export default function Login() {
-    const [text,setText]=useState('');
-    const [password,setPassword]=useState('');
+type LoginNavProp = StackNavigationProp<LoginParamList, "Login">;
+type Props = {
+    navigation: LoginNavProp;
+}
+
+export default function Login(props: Props) {
+    const { navigation } = props;
+    const [text,setText]=useState("");
+    const [password,setPassword]=useState("");
+
+    const login = () => {
+        // TODO: Login to backend
+        navigation.navigate("Onboarding");
+    };
+
+    const signup = () => {
+        // TODO: Signup to backend
+        navigation.navigate("Signup");
+    };
+
+    const googleLogin = () => {
+
+    };
+
+    const fbLogin = () => {
+        navigation.navigate("Test");
+    };
+
     return (
         <View style={styles.container}>
-            <Image style={styles.imagetop} source={require('../assets/Vector1.png')}/>
-            <Image style={styles.logo} source={require('../assets/logo.png')}/>
+            <Image style={styles.imagetop} source={require("../assets/Vector1.png")}/>
             <View style={styles.form}>
-                <Text>
-                    <h1>Sign-in</h1> 
-                </Text>
-                <View style={styles.formcomponent}>
+                <Image style={styles.logo} source={require("../assets/logo.png")}/>
+                <View style={{width: "100%"}}>
                     <Text>
-                        Email-address
+                        <h1>Sign In</h1> 
                     </Text>
-                    <TextInput autoCompleteType="off" style={styles.textinput} placeholder='Enter valid email-id' onChangeText={text=>setText(text)}/>
                 </View>
                 <View style={styles.formcomponent}>
-                    <Text>
+                    <Text style={{marginBottom: "0.25rem"}}>
+                        Email Address
+                    </Text>
+                    <TextInput autoCompleteType="email" textContentType="emailAddress" placeholder='Enter email' onChangeText={text=>setText(text)}/>
+                </View>
+                <View style={styles.formcomponent}>
+                    <Text style={{marginBottom: "0.25rem"}}>
                         Password
                     </Text>
-                    <TextInput style={styles.textinput} placeholder='Enter Password' onChangeText={text=>setPassword(text)}/>
+                    <TextInput secureTextEntry={true} placeholder='Enter Password' onChangeText={text=>setPassword(text)}/>
                 </View>
-                <Text>
+                <Text style={{width: "100%", marginVertical: "1rem", display:"flex", flexDirection: "row-reverse"}}>
                    Forgot Password?
                 </Text>
-                <View style={{width:150,marginTop:20}}>
-                < Button color="black"  title="Login" onPress={() => Alert.alert('Simple Button pressed')}/>
+                
+                <View style={{width: "100%", marginVertical: "1rem"}}>
+                    <Button text="Login" onPress={login} />
                 </View>
-               <Text>
-                   Don't have an account? Sign up!
-               </Text>
+                <Text style={{marginVertical: "1rem"}}>
+                    Don't have an account?&thinsp;
+                    <TouchableOpacity onPress={signup}>
+                        <Text style={styles.link}>
+                            Sign up!
+                        </Text>
+                    </TouchableOpacity>
+                </Text>
                 <View style={styles.icons}>
-                <Image style={styles.icon} source={require('../assets/fb.png')}/>
-                <Image style={styles.icon} source={require('../assets/g.png')}/>
+                    <TouchableOpacity onPress={fbLogin}>
+                        <Image style={styles.icon} source={require("../assets/fb.png")}/>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={googleLogin}>
+                        <Image style={styles.icon} source={require("../assets/g.png")}/>
+                    </TouchableOpacity>
                 </View>
               
             </View>
-            <Image style={styles.imagebottom} source={require('../assets/Vector2.png')}/>
+            <Image style={styles.imagebottom} source={require("../assets/Vector2.png")}/>
         </View>
     );
 }
@@ -48,43 +89,44 @@ export default function Login() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        
-        fontFamily: "DM-Sans" ,
+        alignItems: "center",
+        justifyContent: "center",
+        fontFamily: "DM-Sans",
+        paddingHorizontal: "20%",
+        paddingVertical: "10%"
     },
     logo:{
         width:"200px",
         height:"100px",
-        position:"absolute",
-        top:"50px",
-        left:"100px",
     },
     form:{
-        marginLeft:"40px",
-        position:"absolute",
-        top:"200px",
-        alignItems:"center"
+        flex: 1,
+        alignItems:"center",
+        justifyContent:"center",
+        width:"100%",
+        backgroundColor:"transparent"
     },
     textinput:{
-        height:"40px",
-        backgroundColor:"lightgrey",
-        width:"300px"
-
+        height: "40px",
+        backgroundColor: "lightgrey",
+        width: "100%"
     },
     formcomponent:{
-        margin:"10px"
+        marginVertical: "0.5rem",
+        width: "100%"
     },
     imagetop:{
         width:"165px",
         height:"251px",
+        position: "absolute",
         top:"0px",
         left:"0px",
     },
     icons:{
-      display:"flex",
-      marginTop:"20px",
-      flexDirection:"row",
-      justifyContent:"center",
-      alignItems:"center",
+        display:"flex",
+        flexDirection:"row",
+        justifyContent:"center",
+        alignItems:"center",
     },
     icon:{
         width:"35px",
@@ -98,4 +140,11 @@ const styles = StyleSheet.create({
         right:"0px",
         float:"right", 
     },
+    link:{
+        color:"blue"
+    },
+    fullMarginBot: {
+        width: "100%", 
+        marginBottom: "1rem"
+    }
 });

@@ -1,41 +1,59 @@
 import * as React from "react";
-import {StyleSheet,Text,Button,Alert,View,Image,TextInput} from "react-native"
-import { AntDesign } from '@expo/vector-icons';
+import {StyleSheet,Text,Button,Alert,View,Image} from "react-native";
+import { AntDesign } from "@expo/vector-icons";
 import {useState} from "react";
-export default function Location(){
-    const [text,setText]=useState('');
-    return(
-    <View style={styles.container}>
-       <Image style={styles.imagetop} source={require('../assets/Vector1.png')}/>
-       <View style={styles.form}>
-            <Text style={styles.text}>
-                <h1>Where is your business Located?</h1>
-            </Text>
-            <View style={styles.searchSection}>
+import { StackNavigationProp } from "@react-navigation/stack";
+import { BusinessWizardParamList } from "../types";
+import { NextButton, TextInput } from "../components/Themed";
 
-            
-            <TextInput
-                style={styles.input}
-                placeholder=""
-                onChangeText={(searchString) => {setText(searchString)}}
-                underlineColorAndroid="transparent"
-            />
-            <AntDesign style={styles.searchIcon} name="search1" size={24} color="black" />
-        </View>
-       </View>
+type NavProp = StackNavigationProp<BusinessWizardParamList, "Location">;
+type Props = {
+    navigation: NavProp;
+}
+
+export default function Location(props: Props) {
+    const { navigation } = props;
+    const [text,setText]=useState("");
+
+    const next = () => {
+        navigation.navigate("Specialty");
+    };
+
+    return(
+        <View style={styles.container}>
+            <Image style={styles.imagetop} source={require("../assets/Vector1.png")}/>
+            <View style={styles.form}>
+                <Text style={styles.text}>
+                    <h1>Where is your business Located?</h1>
+                </Text>
+                <View style={styles.searchSection}>
+                    <TextInput
+                        placeholder=""
+                        onChangeText={(searchString) => {setText(searchString);}}
+                        underlineColorAndroid="transparent"
+                    />
+                    <AntDesign style={styles.searchIcon} name="search1" size={24} color="black" />
+                </View>
+            </View>
       
-        <Image style={styles.imagebottom} source={require('../assets/Vector2.png')}/>
-        <Image style={styles.imagenext} source={require('../assets/next.png')}/>
-     </View>
+            <Image style={styles.imagebottom} source={require("../assets/Vector2.png")}/>
+            <View style={styles.imageNextContainer}>
+                <NextButton onPress={next} />
+            </View>
+        </View>
    
     );
 }
 const styles=StyleSheet.create({
-      container:{   
-          flex:1,
-          backgroundColor:"white",
-      },
-      imagebottom:{
+    container:{
+        flex:1,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor:"white",
+        paddingHorizontal: "15%",
+        paddingVertical: "10%"
+    },
+    imagebottom:{
         width:"165px",
         height:"251px",
         position:"absolute",
@@ -58,22 +76,22 @@ const styles=StyleSheet.create({
     imagetop:{
         width:"165px",
         height:"251px",
+        position: "absolute",
         top:"0px",
         left:"0px",
     },
     form:{
-        marginLeft:"40px",
         position:"absolute",
         top:"150px",
-        justifyContent: 'center',
-         alignItems: 'center',
+        justifyContent: "center",
+        alignItems: "center",
        
     },
     searchSection: {
         flex: 1,
-        flexDirection: 'row',
+        flexDirection: "row",
         marginTop:"20px",
-        backgroundColor: '#fff',
+        backgroundColor: "#fff",
     },
     searchIcon: {
         padding: 10,
@@ -84,15 +102,18 @@ const styles=StyleSheet.create({
         height:"43px",
         width:"230px",
         marginLeft:"20px",
-        backgroundColor: 'white',
-        color: '#424242',
+        backgroundColor: "white",
+        color: "#424242",
         outline:"none",
-        shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.8,
-    shadowRadius: 3,  
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.8,
+        shadowRadius: 3,  
         elevation: 5,
     },
-   
-    
+    imageNextContainer: {
+        position:"absolute",
+        bottom:"30px",
+        right:"30px",
+    }
 });
