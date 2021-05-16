@@ -7,6 +7,7 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 import { LoginParamList } from "../../types";
 import { Hashtags } from "../../components/Hashtags";
 import { NavBar } from "../../components/NavBar";
+import DetailedCard from "../../components/DetailedCard";
 
 type NavProp = StackNavigationProp<LoginParamList, "Test">;
 type Props = {
@@ -26,47 +27,9 @@ export default function TestScreen(props: Props) {
                 <Button text="back" onPress={back} />
             </View>
 
-            <ScrollView>
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-                <Text>sdds</Text>
-
-                <Text>sdds</Text>
+            <ScrollView style={{width: "100vw"}}>
+                <DetailedCard />
             </ScrollView>
-            <NavBar currentScreen="Home" />
         </View>
     );
 }
