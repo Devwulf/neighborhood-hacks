@@ -6,6 +6,7 @@ import { Text, View, TextInput, Button } from "../../components/Themed";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { LoginParamList } from "../../types";
 import { Hashtags } from "../../components/Hashtags";
+import NavBar from "../../components/NavBar";
 
 type NavProp = StackNavigationProp<LoginParamList, "Test">;
 type Props = {
@@ -25,11 +26,7 @@ export default function TestScreen(props: Props) {
                 <Button text="back" onPress={back} />
             </View>
 
-            <View style={{height: "9rem"}}>
-                <Hashtags tags={foodItems} />
-                <Hashtags tags={foodItems} />
-                <Hashtags tags={foodItems} />
-            </View>
+            <NavBar />
         </View>
     );
 }
