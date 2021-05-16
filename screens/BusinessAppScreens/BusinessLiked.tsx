@@ -1,7 +1,8 @@
 import { useRoute } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import * as React from "react";
-import { Button, StyleSheet } from "react-native";
+import { Button, Image, ScrollView, StyleSheet } from "react-native";
+import DetailedCard from "../../components/DetailedCard";
 import { NavBar } from "../../components/NavBar";
 
 import { Text, View } from "../../components/Themed";
@@ -34,7 +35,17 @@ export default function BusinessLikedScreen(props: Props) {
 
     return (
         <View style={styles.container}>
-            <Text>Liked</Text>
+            <Image style={{position: "absolute", width: "100vw", height: "100vh"}} source={require("../../assets/leaves.png")} />
+            <ScrollView style={{backgroundColor: "transparent", width: "100vw", paddingVertical: "4rem"}}>
+                <View style={{backgroundColor:"transparent", width: "100%", paddingHorizontal: "3rem", marginBottom: "1rem"}}>
+                    <Text style={{fontSize: 28, fontWeight: "bold"}}>Saved Stores</Text>
+                </View>
+                <DetailedCard />
+                <DetailedCard />
+                <DetailedCard />
+                <DetailedCard />
+            </ScrollView>
+
             <NavBar 
                 currentScreen={route.name} 
                 onHomePressed={goToHome} 
@@ -50,7 +61,8 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-        height: "100vh"
+        height: "100vh",
+        width: "100vw"
     },
     title: {
         fontSize: 20,
