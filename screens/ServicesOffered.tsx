@@ -7,7 +7,7 @@ import { Hashtags } from "../components/Hashtags";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { BusinessWizardParamList } from "../types";
 
-type NavProp = StackNavigationProp<BusinessWizardParamList, "Details">;
+type NavProp = StackNavigationProp<BusinessWizardParamList, "Services">;
 type Props = {
     navigation: NavProp;
 }
