@@ -37,43 +37,43 @@ const styles = StyleSheet.create({
     },
     topfloat:{
         position:"absolute",
-        top:"30px",
-        right:"80px",
+        top: 30,
+        right: 80,
         width:"20px",
         height:"20px"
     },
     bottomfloat:{
         position:"absolute",
-        bottom:"80px",
-        left:"100px",
+        bottom: 80,
+        left: 100,
         width:"20px",
         height:"20px"
     },
     logotop:{
         position:"absolute",
-        left:"130px",
-        top:"150px",
+        left:130,
+        top:150,
         width:"52px",
         height:"30px"
     },
     bottomleft:{
         position:"absolute",
-        bottom:"15px",
-        left:"0px",
+        bottom: 15,
+        left: 0,
         width:"20px",
         height:"50px"
     },
     imagetop:{
         width:"165px",
         height:"251px",
-        top:"0px",
-        left:"0px",
+        top: 0,
+        left: 0,
       
     },
     imageright:{
         position:"absolute",
-        right:"0px",
-        top:"0px",
+        right: 0,
+        top: 0,
         width:"40px",
         height:"50px"
     },
@@ -81,15 +81,15 @@ const styles = StyleSheet.create({
         width:"165px",
         height:"251px",
         position:"absolute",
-        bottom:"0px",
-        right:"0px",  
+        bottom: 0,
+        right: 0,  
     },
     bottomright:{
         width:"55px",
         height:"45px",
         position:"absolute",
-        right:"40px",
-        bottom:"150px"
+        right: 40,
+        bottom: 40
     },
     middle:{
         display:"flex",
@@ -102,8 +102,8 @@ const styles = StyleSheet.create({
         width:"50px",
         height:"50px",
         position:"absolute",
-        bottom:"30px",
-        right:"30px",
+        bottom: 30,
+        right: 30,
         backgroundColor:"black",
         borderRadius:50,
     },

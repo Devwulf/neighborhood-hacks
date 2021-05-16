@@ -42,14 +42,6 @@ export default function Login(props: Props) {
         // TODO: Signup to backend
         navigation.navigate("Signup");
     };
-
-    const googleLogin = () => {
-
-    };
-
-    const fbLogin = () => {
-        
-    };
     
     return (
         <View style={styles.container}>
@@ -81,7 +73,7 @@ export default function Login(props: Props) {
                     <Button text="Login" onPress={login} />
                 </View>
                 <Text style={{marginVertical: "1rem"}}>
-                    Don't have an account?&thinsp;
+                    Dont have an account?&thinsp;
                     <TouchableOpacity onPress={signup}>
                         <Text style={styles.link}>
                             Sign up!
@@ -89,10 +81,10 @@ export default function Login(props: Props) {
                     </TouchableOpacity>
                 </Text>
                 <View style={styles.icons}>
-                    <TouchableOpacity onPress={fbLogin}>
+                    <TouchableOpacity>
                         <Image style={styles.icon} source={require("../assets/fb.png")}/>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={googleLogin}>
+                    <TouchableOpacity>
                         <Image style={styles.icon} source={require("../assets/g.png")}/>
                     </TouchableOpacity>
                 </View>
@@ -136,8 +128,8 @@ const styles = StyleSheet.create({
         width:"165px",
         height:"251px",
         position: "absolute",
-        top:"0px",
-        left:"0px",
+        top: 0,
+        left: 0,
     },
     icons:{
         display:"flex",
@@ -153,9 +145,8 @@ const styles = StyleSheet.create({
         width:"165px",
         height:"251px",
         position:"absolute",
-        bottom:"0px",
-        right:"0px",
-        float:"right", 
+        bottom: 0,
+        right: 0,
     },
     link:{
         color:"blue"

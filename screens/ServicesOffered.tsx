@@ -120,8 +120,8 @@ const styles=StyleSheet.create({
         width:"165px",
         height:"251px",
         position: "absolute",
-        top:"0px",
-        left:"0px",
+        top:0,
+        left:0,
     },
     input: {
         borderRadius:8,
@@ -131,7 +131,6 @@ const styles=StyleSheet.create({
         marginLeft:"20px",
         backgroundColor: "white",
         color: "#424242",
-        outline:"none",
         shadowColor: "#000",
         shadowOffset: { width: 0, height: 1 },
         shadowOpacity: 0.8,
@@ -149,7 +148,7 @@ const styles=StyleSheet.create({
     },
     imageNextContainer: {
         position:"absolute",
-        bottom:"30px",
-        right:"30px",
+        bottom:30,
+        right:30,
     }
 });

@@ -48,16 +48,15 @@ const styles=StyleSheet.create({
         width:"165px",
         height:"251px",
         position:"absolute",
-        bottom:"0px",
-        right:"0px",
-        float:"right", 
+        bottom:0,
+        right:0,
     },
     imagenext:{
         width:"50px",
         height:"50px",
         position:"absolute",
-        bottom:"30px",
-        right:"30px",
+        bottom:30,
+        right:30,
         backgroundColor:"black",
         borderRadius:50,
     },
@@ -67,13 +66,13 @@ const styles=StyleSheet.create({
     imagetop:{
         width:"165px",
         height:"251px",
-        top:"0px",
-        left:"0px",
+        top:0,
+        left:0,
     },
     form:{
         marginLeft:"40px",
         position:"absolute",
-        top:"150px",
+        top:150,
         justifyContent: "center",
         alignItems: "center",
        
@@ -85,7 +84,7 @@ const styles=StyleSheet.create({
     },
     imageNextContainer: {
         position:"absolute",
-        bottom:"30px",
-        right:"30px",
+        bottom:30,
+        right:30,
     }
 });

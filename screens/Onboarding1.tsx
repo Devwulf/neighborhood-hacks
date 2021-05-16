@@ -55,8 +55,8 @@ const styles = StyleSheet.create({
         width:"165px",
         height:"251px",
         position:"absolute",
-        bottom:"0px",
-        right:"0px",
+        bottom: 0,
+        right: 0,
     },
     imagenext:{
         width:"50px",
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     },
     imageNextContainer: {
         position:"absolute",
-        bottom:"30px",
-        right:"30px",
+        bottom: 30,
+        right: 30,
     }
 });

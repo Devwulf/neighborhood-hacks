@@ -25,7 +25,7 @@ export default function OwnerendScreen(props: Props) {
             <View style={styles.form}>
                 <Image style={styles.image} source={require("../assets/endboss.png")}/>
                 <Text>
-                    <h1>Hooray! You're all set</h1>
+                    <h1>Hooray! Youre all set</h1>
                 </Text>
                 <View style={{width: "100%", marginVertical: "1rem"}}>
                     <Button text="Let's get started" onPress={next} />
@@ -61,16 +61,15 @@ const styles = StyleSheet.create({
         width:"165px",
         height:"251px",
         position: "absolute",
-        top:"0px",
-        left:"0px",
+        top:0,
+        left:0,
     },
    
     imagebottom:{
         width:"165px",
         height:"251px",
         position:"absolute",
-        bottom:"0px",
-        right:"0px",
-        float:"right", 
+        bottom:0,
+        right:0,
     },
 });

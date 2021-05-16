@@ -29,6 +29,8 @@
     },
     "web": {
       "favicon": "./assets/images/favicon.png"
-    }
+    },
+    "description": "Locals helps build a compassionate community by providing a safe and creative place that works as an effective bridge between consumers and local business owners. Through our platform, we want to contribute to improving a strong community connection and empower local small business owners.",
+    "githubUrl": "https://github.com/Devwulf/neighborhood-hacks"
   }
 }

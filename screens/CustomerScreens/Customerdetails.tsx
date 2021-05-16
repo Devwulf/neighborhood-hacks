@@ -102,8 +102,8 @@ const styles = StyleSheet.create({
         width:"165px",
         height:"251px",
         position: "absolute",
-        top:"0px",
-        left:"0px",
+        top:0,
+        left:0,
     },
     icon:{
         width:"35px",
@@ -113,9 +113,8 @@ const styles = StyleSheet.create({
         width:"165px",
         height:"251px",
         position:"absolute",
-        bottom:"0px",
-        right:"0px",
-        float:"right", 
+        bottom:0,
+        right:0,
     },
     link:{
         color:"blue"
@@ -132,7 +131,7 @@ const styles = StyleSheet.create({
     },
     imageNextContainer: {
         position:"absolute",
-        bottom:"30px",
-        right:"30px",
+        bottom:30,
+        right:30,
     }
 });

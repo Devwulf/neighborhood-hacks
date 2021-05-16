@@ -62,8 +62,8 @@ const styles = StyleSheet.create({
         width:"165px",
         height:"251px",
         position: "absolute",
-        top:"0px",
-        left:"0px",
+        top:0,
+        left:0,
     },
     buttons:{
         color:"black",
@@ -74,9 +74,8 @@ const styles = StyleSheet.create({
         width:"165px",
         height:"251px",
         position:"absolute",
-        bottom:"0px",
-        right:"0px",
-        float:"right", 
+        bottom: 0,
+        right: 0,
     }
    
 });
