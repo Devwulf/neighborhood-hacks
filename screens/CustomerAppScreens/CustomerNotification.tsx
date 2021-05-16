@@ -1,10 +1,10 @@
 import { useRoute } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import * as React from "react";
-import { Button, StyleSheet } from "react-native";
+import {  StyleSheet,ScrollView } from "react-native";
 import { NavBar } from "../../components/NavBar";
-
-import { Text, View } from "../../components/Themed";
+import Card from "../../components/Card"
+import { Text, View,Button } from "../../components/Themed";
 import { BusinessParamList } from "../../types";
 
 type NavProp = StackNavigationProp<BusinessParamList, "Notification">;
@@ -34,7 +34,15 @@ export default function BusinessNotificationScreen(props: Props) {
 
     return (
         <View style={styles.container}>
-            <Text>Notification</Text>
+            <ScrollView>
+                <Card img={require('../../assets/1.png')} data="Thank you for joining #Locals!!.
+                Let’s make an impact together."/>
+                <Card img={require('../../assets/2.png')} data="5 people liked your reviews today! You’re making an impact!"/>
+                <Card img={require('../../assets/3.png')} data="Congratulations, You’ve won the best reviewer award"/>
+                <Card img={require('../../assets/4.png')} data=" Hooray!You’ve reached 200 followers"/>
+                <Text style={styles.text} >Delete all</Text>
+            </ScrollView>
+            
             <NavBar 
                 currentScreen={route.name} 
                 onHomePressed={goToHome} 
@@ -61,4 +69,9 @@ const styles = StyleSheet.create({
         height: 1,
         width: "80%",
     },
+    text:{
+        display:"flex",
+        flexDirection:"row-reverse",
+    },
+    
 });
