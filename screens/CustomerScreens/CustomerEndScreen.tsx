@@ -27,7 +27,7 @@ export default function CustomerEndScreen(props: Props) {
                 <Text>
                     <h1>Hooray! Youre all set</h1>
                 </Text>
-                <View style={{width: "100%", marginVertical: "1rem"}}>
+                <View style={{width: "100%", marginVertical: 16}}>
                     <Button text="Let's get started" onPress={next} />
                 </View>
             </View>
@@ -55,19 +55,19 @@ const styles = StyleSheet.create({
         alignItems:"center",
         justifyContent:"center",
         position:"absolute",
-        width:"300px"
+        width:300
     },
     imagetop:{
-        width:"165px",
-        height:"251px",
+        width:165,
+        height:251,
         position: "absolute",
         top:0,
         left:0,
     },
    
     imagebottom:{
-        width:"165px",
-        height:"251px",
+        width:165,
+        height:251,
         position:"absolute",
         bottom:0,
         right:0,

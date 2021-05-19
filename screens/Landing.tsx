@@ -8,20 +8,20 @@ export default function Landing() {
     return (
         <View style={styles.container}>
        
-         <Image style={styles.imagetop} source={require('../assets/vector1.png')} />
-         <Image style={styles.logotop} source={require('../assets/logotop.png')} />
-         <Image style={styles.imageright} source={require('../assets/topright.png')}/>
-         <Image style={styles.bottomleft} source={require('../assets/bottomleft.png')}/>
-         <Image style={styles.bottomright} source={require('../assets/bottomright.png')}/>
-         <Image style={styles.bottomfloat} source={require('../assets/bottomfloat.png')}/>
-         <Image style={styles.topfloat} source={require('../assets/topfloat.png')}/>
-         <View style={styles.middle}>
-         <Image style={styles.logo} source={require('../assets/logo.png')} /> 
+            <Image style={styles.imagetop} source={require("../assets/vector1.png")} />
+            <Image style={styles.logotop} source={require("../assets/logotop.png")} />
+            <Image style={styles.imageright} source={require("../assets/topright.png")}/>
+            <Image style={styles.bottomleft} source={require("../assets/bottomleft.png")}/>
+            <Image style={styles.bottomright} source={require("../assets/bottomright.png")}/>
+            <Image style={styles.bottomfloat} source={require("../assets/bottomfloat.png")}/>
+            <Image style={styles.topfloat} source={require("../assets/topfloat.png")}/>
+            <View style={styles.middle}>
+                <Image style={styles.logo} source={require("../assets/logo.png")} /> 
         
-         <Text> <h1>#LoveLocals</h1></Text>
-         </View>
-         <Image style={styles.imagebottom}source={require('../assets/Vector2.png')} /> 
-         <Image style={styles.imagenext} source={require('../assets/next.png')}/>
+                <Text> <h1>#LoveLocals</h1></Text>
+            </View>
+            <Image style={styles.imagebottom}source={require("../assets/Vector2.png")} /> 
+            <Image style={styles.imagenext} source={require("../assets/next.png")}/>
         </View>
     );
 }
@@ -31,41 +31,42 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     logo:{
-     width:"200px",
-     height:"70px",
+        width:200,
+        height:70,
      
     },
     topfloat:{
         position:"absolute",
         top: 30,
         right: 80,
-        width:"20px",
-        height:"20px"
+        width:20,
+        height:20
     },
     bottomfloat:{
         position:"absolute",
         bottom: 80,
         left: 100,
-        width:"20px",
-        height:"20px"
+        width:20,
+        height:20
     },
     logotop:{
         position:"absolute",
         left:130,
         top:150,
-        width:"52px",
-        height:"30px"
+        width:52,
+        height:30
     },
     bottomleft:{
         position:"absolute",
         bottom: 15,
         left: 0,
-        width:"20px",
-        height:"50px"
+        width:20,
+        height:50
     },
     imagetop:{
-        width:"165px",
-        height:"251px",
+        width:165,
+        height:251,
+        position: "absolute",
         top: 0,
         left: 0,
       
@@ -74,19 +75,19 @@ const styles = StyleSheet.create({
         position:"absolute",
         right: 0,
         top: 0,
-        width:"40px",
-        height:"50px"
+        width:40,
+        height:50
     },
     imagebottom:{
-        width:"165px",
-        height:"251px",
+        width:165,
+        height:251,
         position:"absolute",
         bottom: 0,
         right: 0,  
     },
     bottomright:{
-        width:"55px",
-        height:"45px",
+        width:55,
+        height:45,
         position:"absolute",
         right: 40,
         bottom: 40
@@ -99,8 +100,8 @@ const styles = StyleSheet.create({
         
     },
     imagenext:{
-        width:"50px",
-        height:"50px",
+        width:50,
+        height:50,
         position:"absolute",
         bottom: 30,
         right: 30,

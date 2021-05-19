@@ -54,32 +54,32 @@ export default function Login(props: Props) {
                     </Text>
                 </View>
                 <View style={styles.formcomponent}>
-                    <Text style={{marginBottom: "0.25rem"}}>
+                    <Text style={{marginBottom: 4}}>
                         Email Address
                     </Text>
                     <TextInput autoCompleteType="email" textContentType="emailAddress" placeholder='Enter email' onChangeText={text=>setText(text)}/>
                 </View>
                 <View style={styles.formcomponent}>
-                    <Text style={{marginBottom: "0.25rem"}}>
+                    <Text style={{marginBottom: 4}}>
                         Password
                     </Text>
                     <TextInput secureTextEntry={true} placeholder='Enter Password' onChangeText={text=>setPassword(text)}/>
                 </View>
-                <Text style={{width: "100%", marginVertical: "1rem", display:"flex", flexDirection: "row-reverse"}}>
+                <Text style={{width: "100%", marginVertical: 16, display:"flex", flexDirection: "row-reverse"}}>
                    Forgot Password?
                 </Text>
                 
-                <View style={{width: "100%", marginVertical: "1rem"}}>
+                <View style={{width: "100%", marginVertical: 16}}>
                     <Button text="Login" onPress={login} />
                 </View>
-                <Text style={{marginVertical: "1rem"}}>
+                <Text style={{marginVertical: 16}}>
                     Dont have an account?&thinsp;
-                    <TouchableOpacity onPress={signup}>
-                        <Text style={styles.link}>
-                            Sign up!
-                        </Text>
-                    </TouchableOpacity>
                 </Text>
+                <TouchableOpacity onPress={signup}>
+                    <Text style={styles.link}>
+                        Sign up!
+                    </Text>
+                </TouchableOpacity>
                 <View style={styles.icons}>
                     <TouchableOpacity>
                         <Image style={styles.icon} source={require("../assets/fb.png")}/>
@@ -105,8 +105,8 @@ const styles = StyleSheet.create({
         paddingVertical: "10%"
     },
     logo:{
-        width:"200px",
-        height:"100px",
+        width:200,
+        height:100,
     },
     form:{
         flex: 1,
@@ -116,17 +116,17 @@ const styles = StyleSheet.create({
         backgroundColor:"transparent"
     },
     textinput:{
-        height: "40px",
+        height: 40,
         backgroundColor: "lightgrey",
         width: "100%"
     },
     formcomponent:{
-        marginVertical: "0.5rem",
+        marginVertical: 8,
         width: "100%"
     },
     imagetop:{
-        width:"165px",
-        height:"251px",
+        width:165,
+        height:251,
         position: "absolute",
         top: 0,
         left: 0,
@@ -138,12 +138,12 @@ const styles = StyleSheet.create({
         alignItems:"center",
     },
     icon:{
-        width:"35px",
-        height:"35px",
+        width:35,
+        height:35,
     },
     imagebottom:{
-        width:"165px",
-        height:"251px",
+        width:165,
+        height:251,
         position:"absolute",
         bottom: 0,
         right: 0,
@@ -153,6 +153,6 @@ const styles = StyleSheet.create({
     },
     fullMarginBot: {
         width: "100%", 
-        marginBottom: "1rem"
+        marginBottom: 16
     }
 });

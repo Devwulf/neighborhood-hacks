@@ -36,46 +36,46 @@ export default function CustomerProfileScreen(props: Props) {
         <View style={styles.container}>
           
             <View style={styles.customerprofile}>
-            <Image style={styles.image} source={require('../../assets/profilepictureC.png')} />
-             <Text style={{color:"white"}}>
-                 <h4>Danny Sum</h4>
-                 <h5>250 Followers</h5>
-             </Text>
+                <Image style={styles.image} source={require("../../assets/profilepictureC.png")} />
+                <Text style={{color:"white"}}>
+                    <h4>Danny Sum</h4>
+                    <h5>250 Followers</h5>
+                </Text>
             </View>
              
 
             <ScrollView>
-            <View style={styles.formcomponent}>
-                    <Text style={{marginBottom: "0.25rem"}}>
+                <View style={styles.formcomponent}>
+                    <Text style={{marginBottom: 4}}>
                         Name
                     </Text>
                     <TextInput placeholder='Danny Sum'/>
                 </View>
                 <View style={styles.formcomponent}>
-                    <Text style={{marginBottom: "0.25rem"}}>
+                    <Text style={{marginBottom: 4}}>
                         Age
                     </Text>
                     <TextInput placeholder='24'/>
                 </View>
                 <View style={styles.formcomponent}>
-                    <Text style={{marginBottom: "0.25rem"}}>
+                    <Text style={{marginBottom: 4}}>
                         Social Media Links
                     </Text>
-                    <View style={{marginBottom: "0.25rem"}}>
+                    <View style={{marginBottom: 4}}>
                         <TextInput placeholder='dannesumofficial'/>
                     </View>
-                    <View style={{marginBottom: "0.25rem"}}>
+                    <View style={{marginBottom: 4}}>
                         <TextInput placeholder='dannySum' />
                     </View>
-                    <View style={{marginBottom: "0.25rem"}}>
+                    <View style={{marginBottom: 4}}>
                         <TextInput placeholder='dannysum12489' />
                     </View>
                 </View>
                 <View>
                     <Text>About You</Text>
-                <TextInput placeholder="Hello I'm a photography enthusiast" multiline style={styles.textinput}>
+                    <TextInput placeholder="Hello I'm a photography enthusiast" multiline style={styles.textinput}>
                 
-                </TextInput>
+                    </TextInput>
                 </View>
             </ScrollView>
             
@@ -112,8 +112,8 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
     },
     image:{
-        width:"150px",
-        height:"150px",
+        width:150,
+        height:150,
     },
     separator: {
         marginVertical: 30,
@@ -121,13 +121,13 @@ const styles = StyleSheet.create({
         width: "80%",
     },
     textinput:{
-        height:"200px",
-        width:"300px",
+        height:200,
+        width:300,
         backgroundColor:"#ECF1F4",
         
     },
     formcomponent:{
-        marginVertical: "0.5rem",
+        marginVertical: 8,
         width: "100%"
     },
 });

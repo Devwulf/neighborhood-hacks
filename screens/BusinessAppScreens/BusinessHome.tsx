@@ -39,7 +39,7 @@ export default function BusinessHomeScreen(props: Props) {
                 <View style={styles.topView}>
                     <Image style={styles.mainImg} source={require("../../assets/bakery.png")}/>
                     <View style={styles.details}>
-                        <View style={{backgroundColor: "transparent", marginBottom: "0.5rem"}}>
+                        <View style={{backgroundColor: "transparent", marginBottom: 8}}>
                             <Text style={styles.name}>Hello</Text>
                             <Text style={styles.name}>Bread&Butter</Text>
                         </View>
@@ -61,7 +61,7 @@ export default function BusinessHomeScreen(props: Props) {
                         </View>
                     </View>
                 </View>
-                <View style={{paddingVertical: "1rem"}}>
+                <View style={{paddingVertical: 16}}>
                     <DetailedCard />
                     <DetailedCard />
                     <DetailedCard />
@@ -91,20 +91,20 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignContent: "center",
         justifyContent: "center",
-        paddingTop: "3rem",
+        paddingTop: 48,
         width: "100%",
-        height: "14rem",
+        height: 224,
         backgroundColor: "black"
     },
     mainImg: {
         width: 170, 
         height: 165,
-        marginLeft: "-0.5rem",
-        marginRight: "1rem"
+        marginLeft: -8,
+        marginRight: 16
     },
     details: {
         backgroundColor: "black",
-        paddingTop: "0.5rem"
+        paddingTop: 8
     },
     name: {
         fontSize: 20, 
@@ -113,13 +113,9 @@ const styles = StyleSheet.create({
     },
     mainCountContainer: {
         display: "flex",
-        paddingHorizontal: "0.5rem",
+        paddingHorizontal: 8,
         backgroundColor: "white",
-        borderRadius: 5,
-        shadowColor: "white",
-        shadowOffset: {width: 4, height: 4},
-        shadowRadius: 5,
-        shadowOpacity: 0.15
+        borderRadius: 5
     },
     mainCountTitle: {
         fontSize: 20, 
@@ -127,8 +123,8 @@ const styles = StyleSheet.create({
     },
     mainCountSubtitle: {
         fontSize: 10,
-        marginTop: "-0.25rem",
-        marginBottom: "0.25rem"
+        marginTop: -4,
+        marginBottom: 4
     },
     subCountContainer: {
         display: "flex",
@@ -139,7 +135,7 @@ const styles = StyleSheet.create({
     subCountTitle: {
         fontSize: 25, 
         fontWeight: "bold",
-        marginRight: "0.5rem",
+        marginRight: 8,
         color: "white"
     },
     subCountSubtitle: {

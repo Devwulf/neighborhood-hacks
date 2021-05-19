@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "neighborhood-hacks",
-    "slug": "neighborhood-hacks",
+    "name": "neighborhood-hacks-locals",
+    "slug": "neighborhood-hacks-locals",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",

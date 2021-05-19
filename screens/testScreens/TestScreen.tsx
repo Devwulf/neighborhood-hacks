@@ -23,7 +23,7 @@ export default function TestScreen(props: Props) {
     const foodItems = ["Indian","Korean","Mexican","Italian","SweetFood","Salty","Desserts","Starters","Vegan"];
     return (
         <View style={styles.container}>
-            <View style={{width: "100%", marginBottom: "2rem"}}>
+            <View style={{width: "100%", marginBottom: 32}}>
                 <Button text="back" onPress={back} />
             </View>
 
@@ -40,8 +40,8 @@ const styles = StyleSheet.create({
         height: "100vh"
     },
     logo:{
-        width:"200px",
-        height:"100px",
+        width:200,
+        height:100,
     },
     form:{
         flex: 1,
@@ -51,17 +51,17 @@ const styles = StyleSheet.create({
         backgroundColor:"transparent"
     },
     textinput:{
-        height: "40px",
+        height: 40,
         backgroundColor: "lightgrey",
         width: "100%"
     },
     formcomponent:{
-        marginVertical: "0.5rem",
+        marginVertical: 8,
         width: "100%"
     },
     imagetop:{
-        width:"165px",
-        height:"251px",
+        width:165,
+        height:251,
         position: "absolute",
         top:0,
         left:0,
@@ -73,12 +73,12 @@ const styles = StyleSheet.create({
         alignItems:"center",
     },
     icon:{
-        width:"35px",
-        height:"35px",
+        width:35,
+        height:35,
     },
     imagebottom:{
-        width:"165px",
-        height:"251px",
+        width:165,
+        height:251,
         position:"absolute",
         bottom:0,
         right:0,
@@ -88,6 +88,6 @@ const styles = StyleSheet.create({
     },
     fullMarginBot: {
         width: "100%", 
-        marginBottom: "1rem"
+        marginBottom: 16
     }
 });

@@ -47,19 +47,19 @@ const styles = StyleSheet.create({
         width:"100%"
     },
     image:{
-        width:"200px",
-        height:"300px"
+        width:200,
+        height:300
     },
     imagebottom:{
-        width:"165px",
-        height:"251px",
+        width:165,
+        height:251,
         position:"absolute",
         bottom: 0,
         right: 0,
     },
     imagenext:{
-        width:"50px",
-        height:"50px",
+        width:50,
+        height:50,
         backgroundColor:"black",
         borderRadius:50,
     },

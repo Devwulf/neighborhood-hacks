@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "transparent",
-        height: "8rem",
+        height: 128,
         width: "100vw"
     },
     cardContainer: {
@@ -41,30 +41,26 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         borderRadius: 20,
         width: "80%",
-        height: "7rem",
-        paddingHorizontal: "0.5rem",
-        shadowOffset: {width: 0, height: 2},
-        shadowColor: "black",
-        shadowOpacity: 0.1, 
-        shadowRadius: 15
+        height: 112,
+        paddingHorizontal: 8
     },
     mainImg: {
         width: 30,
         height: 30,
-        marginTop: "-2rem"
+        marginTop: -32
     },
     details: {
         flex: 1,
-        paddingHorizontal: "1rem",
-        paddingVertical: "1rem"
+        paddingHorizontal: 16,
+        paddingVertical: 16
     },
     imagestyle:{
-        width:"1rem",
-        height:"1rem",
+        width:16,
+        height:16,
     },
     title: {
         color: "#57c4cc",
-        marginBottom: "0.5rem",
+        marginBottom: 8,
         fontSize: 11,
         fontWeight: "bold"
     },

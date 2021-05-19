@@ -54,15 +54,15 @@ const styles=StyleSheet.create({
         paddingVertical: "10%"
     },
     imagebottom:{
-        width:"165px",
-        height:"251px",
+        width:165,
+        height:251,
         position:"absolute",
         bottom:0,
         right:0,
     },
     imagenext:{
-        width:"50px",
-        height:"50px",
+        width:50,
+        height:50,
         position:"absolute",
         bottom:30,
         right:30,
@@ -70,11 +70,11 @@ const styles=StyleSheet.create({
         borderRadius:50,
     },
     text:{
-        width:"250px",
+        width:250,
     },
     imagetop:{
-        width:"165px",
-        height:"251px",
+        width:165,
+        height:251,
         position: "absolute",
         top:0,
         left:0,
@@ -89,7 +89,7 @@ const styles=StyleSheet.create({
     searchSection: {
         flex: 1,
         flexDirection: "row",
-        marginTop:"20px",
+        marginTop:20,
         backgroundColor: "#fff",
     },
     searchIcon: {
@@ -98,15 +98,11 @@ const styles=StyleSheet.create({
     input: {
         borderRadius:8,
         flex: 1,
-        height:"43px",
-        width:"230px",
-        marginLeft:"20px",
+        height:43,
+        width:230,
+        marginLeft:20,
         backgroundColor: "white",
         color: "#424242",
-        shadowColor: "#000",
-        shadowOffset: { width: 0, height: 1 },
-        shadowOpacity: 0.8,
-        shadowRadius: 3,  
         elevation: 5,
     },
     imageNextContainer: {

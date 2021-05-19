@@ -30,40 +30,40 @@ export default function OwnerDetails(props: Props) {
                     </h1>
                 </Text>
                 <View style={styles.formcomponent}>
-                    <Text style={{marginBottom: "0.25rem"}}>
+                    <Text style={{marginBottom: 4}}>
                         Email Address
                     </Text>
                     <TextInput autoCompleteType="email" textContentType="emailAddress" placeholder='Enter your email...' onChangeText={text=>setText(text)}/>
                 </View>
                 <View style={styles.formcomponent}>
-                    <Text style={{marginBottom: "0.25rem"}}>
+                    <Text style={{marginBottom: 4}}>
                         Name
                     </Text>
                     <TextInput placeholder='Enter your name...' onChangeText={text=>setText(text)}/>
                 </View>
                 <View style={styles.formcomponent}>
-                    <Text style={{marginBottom: "0.25rem"}}>
+                    <Text style={{marginBottom: 4}}>
                         Business-Name
                     </Text>
                     <TextInput placeholder='Enter your business name...' onChangeText={text=>setText(text)}/>
                 </View>
                 <View style={styles.formcomponent}>
-                    <Text style={{marginBottom: "0.25rem"}}>
+                    <Text style={{marginBottom: 4}}>
                         Business Launch Date
                     </Text>
                     <TextInput placeholder='Enter your launch date...' onChangeText={text=>setText(text)}/>
                 </View>
                 <View style={styles.formcomponent}>
-                    <Text style={{marginBottom: "0.25rem"}}>
+                    <Text style={{marginBottom: 4}}>
                         Social Media Links
                     </Text>
-                    <View style={{marginBottom: "0.25rem"}}>
+                    <View style={{marginBottom: 4}}>
                         <TextInput placeholder='Instagram' onChangeText={text=>setText(text)}/>
                     </View>
-                    <View style={{marginBottom: "0.25rem"}}>
+                    <View style={{marginBottom: 4}}>
                         <TextInput placeholder='Facebook' onChangeText={text=>setText(text)}/>
                     </View>
-                    <View style={{marginBottom: "0.25rem"}}>
+                    <View style={{marginBottom: 4}}>
                         <TextInput placeholder='Twitter' onChangeText={text=>setText(text)}/>
                     </View>
                 </View>
@@ -86,8 +86,8 @@ const styles = StyleSheet.create({
         paddingVertical: "20%"
     },
     logo:{
-        width:"200px",
-        height:"100px",
+        width:200,
+        height:100,
     },
     form:{
         flex: 1,
@@ -95,28 +95,28 @@ const styles = StyleSheet.create({
         backgroundColor:"transparent"
     },
     textinput:{
-        height: "40px",
+        height: 40,
         backgroundColor: "lightgrey",
         width: "100%"
     },
     formcomponent:{
-        marginVertical: "0.5rem",
+        marginVertical: 8,
         width: "100%"
     },
     imagetop:{
-        width:"165px",
-        height:"251px",
+        width:165,
+        height:251,
         position: "absolute",
         top:0,
         left:0,
     },
     icon:{
-        width:"35px",
-        height:"35px",
+        width:35,
+        height:35,
     },
     imagebottom:{
-        width:"165px",
-        height:"251px",
+        width:165,
+        height:251,
         position:"absolute",
         bottom: 0,
         right: 0,
@@ -126,11 +126,11 @@ const styles = StyleSheet.create({
     },
     fullMarginBot: {
         width: "100%", 
-        marginBottom: "1rem"
+        marginBottom: 16
     },
     imagenext:{
-        width:"50px",
-        height:"50px",
+        width:50,
+        height:50,
         backgroundColor:"black",
         borderRadius:50,
     },

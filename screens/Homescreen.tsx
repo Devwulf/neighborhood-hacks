@@ -32,10 +32,10 @@ export default function Onboarding1(props: Props) {
                 <View>
                     <Text><h3>Are you a</h3></Text>
                     
-                    <View style={{width: "100%", marginTop: "1rem", marginBottom: "0.25rem"}}>
+                    <View style={{width: "100%", marginTop: 16, marginBottom: 4}}>
                         <Button text="Business Owner" onPress={business} />
                     </View>
-                    <View style={{width: "100%", marginTop: "0.25rem", marginBottom: "1rem"}}>
+                    <View style={{width: "100%", marginTop: 4, marginBottom: 16}}>
                         <Button text="Customer" onPress={customer} />
                     </View>
                 </View>
@@ -59,20 +59,20 @@ const styles = StyleSheet.create({
         backgroundColor:"transparent"
     },
     imagetop:{
-        width:"165px",
-        height:"251px",
+        width:165,
+        height:251,
         position: "absolute",
         top:0,
         left:0,
     },
     buttons:{
         color:"black",
-        width:"200px",
+        width:200,
        
     },
     imagebottom:{
-        width:"165px",
-        height:"251px",
+        width:165,
+        height:251,
         position:"absolute",
         bottom: 0,
         right: 0,

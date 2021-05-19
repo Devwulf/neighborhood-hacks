@@ -47,7 +47,7 @@ export default function ServicesOffered(props: Props) {
     return(
         <View style={styles.container}>
             <Image style={styles.imagetop} source={require("../assets/Vector1.png")}/>
-            <View style={{marginBottom: "2rem"}}>
+            <View style={{marginBottom: 32}}>
                 <Text style={styles.text}><h1>What services do you offer?</h1></Text>
                 <View style={styles.searchSection}>
                     <TextInput
@@ -58,26 +58,26 @@ export default function ServicesOffered(props: Props) {
                     <AntDesign style={styles.searchIcon} name="search1" size={24} color="black" />
                 </View>
             </View>
-            <View style={{marginBottom: "1rem", width: "100%"}}>
+            <View style={{marginBottom: 16, width: "100%"}}>
                 <Text style={{fontSize: 20, fontWeight: "600"}}>Food</Text>
             </View>
-            <View style={{marginBottom: "1rem"}}>
+            <View style={{marginBottom: 16}}>
                 <Hashtags tags={foodItems1} />
                 <Hashtags tags={foodItems2} />
                 <Hashtags tags={foodItems3} />
             </View>
-            <View style={{marginBottom: "1rem", width: "100%"}}>
+            <View style={{marginBottom: 16, width: "100%"}}>
                 <Text style={{fontSize: 20, fontWeight: "600"}}>Apparel</Text>
             </View>
-            <View style={{marginBottom: "1rem"}}>
+            <View style={{marginBottom: 16}}>
                 <Hashtags tags={apparel1} />
                 <Hashtags tags={apparel2} />
                 <Hashtags tags={apparel3} />
             </View>
-            <View style={{marginBottom: "1rem", width: "100%"}}>
+            <View style={{marginBottom: 16, width: "100%"}}>
                 <Text style={{fontSize: 20, fontWeight: "600"}}>Entertainment</Text>
             </View>
-            <View style={{marginBottom: "4rem"}}>
+            <View style={{marginBottom: 64}}>
                 <Hashtags tags={entertainment1} />
                 <Hashtags tags={entertainment2} />
                 <Hashtags tags={entertainment3} />
@@ -100,7 +100,7 @@ const styles=StyleSheet.create({
     searchSection: {
         flex: 1,
         flexDirection: "row",
-        marginTop:"20px",
+        marginTop:20,
         backgroundColor: "#fff",
     },
     searchIcon: {
@@ -112,13 +112,13 @@ const styles=StyleSheet.create({
 
     },
     form:{
-        top:"40px",
+        top:40,
         justifyContent: "center",
         alignItems: "center",
     },
     imagetop:{
-        width:"165px",
-        height:"251px",
+        width:165,
+        height:251,
         position: "absolute",
         top:0,
         left:0,
@@ -126,25 +126,21 @@ const styles=StyleSheet.create({
     input: {
         borderRadius:8,
         flex: 1,
-        height:"43px",
-        width:"230px",
-        marginLeft:"20px",
+        height:43,
+        width:230,
+        marginLeft:20,
         backgroundColor: "white",
         color: "#424242",
-        shadowColor: "#000",
-        shadowOffset: { width: 0, height: 1 },
-        shadowOpacity: 0.8,
-        shadowRadius: 3,  
         elevation: 5,
     },
     textdisplay:{
         borderColor:"black",
-        width:"100px",
-        height:"20px",
+        width:100,
+        height:20,
         borderWidth:2,
         backgroundColor:"black",
         color:"white",
-        margin:"2px",
+        margin:2,
     },
     imageNextContainer: {
         position:"absolute",

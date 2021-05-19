@@ -45,15 +45,15 @@ const styles=StyleSheet.create({
         backgroundColor:"white",
     },
     imagebottom:{
-        width:"165px",
-        height:"251px",
+        width:165,
+        height:251,
         position:"absolute",
         bottom:0,
         right:0,
     },
     imagenext:{
-        width:"50px",
-        height:"50px",
+        width:50,
+        height:50,
         position:"absolute",
         bottom:30,
         right:30,
@@ -61,16 +61,17 @@ const styles=StyleSheet.create({
         borderRadius:50,
     },
     text:{
-        width:"300px",
+        width:300,
     },
     imagetop:{
-        width:"165px",
-        height:"251px",
+        width:165,
+        height:251,
+        position: "absolute",
         top:0,
         left:0,
     },
     form:{
-        marginLeft:"40px",
+        marginLeft:40,
         position:"absolute",
         top:150,
         justifyContent: "center",
@@ -78,8 +79,8 @@ const styles=StyleSheet.create({
        
     },
     textinput:{
-        height:"200px",
-        width:"300px",
+        height:200,
+        width:300,
         backgroundColor:"#ECF1F4",
     },
     imageNextContainer: {

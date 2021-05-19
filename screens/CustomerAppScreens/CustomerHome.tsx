@@ -36,20 +36,20 @@ export default function BusinessHomeScreen(props: Props) {
     return (
         <View style={styles.container}>
             <ScrollView style={{width: "100vw"}}>
-            <View style={styles.customerprofile}>
-            <Image style={styles.image} source={require('../../assets/profilepictureC.png')} />
-             <View style={{display:"flex",flexDirection:"column" ,backgroundColor:"black"}}>
-             <Text style={{color:"white"}}><h4>Hello Danny!</h4></Text>
-             <Text style={{color:"white"}}><h5>You have 250 Followers</h5></Text>
+                <View style={styles.customerprofile}>
+                    <Image style={styles.image} source={require("../../assets/profilepictureC.png")} />
+                    <View style={{display:"flex",flexDirection:"column" ,backgroundColor:"black"}}>
+                        <Text style={{color:"white"}}><h4>Hello Danny!</h4></Text>
+                        <Text style={{color:"white"}}><h5>You have 250 Followers</h5></Text>
                  
-                 <View style={{display:"flex",flexDirection:"row",backgroundColor:"black"}}>
-                     <Text style={{color:"white"}}><h3>15</h3></Text>
-                     <Text style={{color:"white"}}><h5>Liked your reviews</h5></Text>
-                 </View>
-             </View>
+                        <View style={{display:"flex",flexDirection:"row",backgroundColor:"black"}}>
+                            <Text style={{color:"white"}}><h3>15</h3></Text>
+                            <Text style={{color:"white"}}><h5>Liked your reviews</h5></Text>
+                        </View>
+                    </View>
             
-                 </View>
-                <View style={{paddingVertical: "1rem"}}>
+                </View>
+                <View style={{paddingVertical: 16}}>
                     <DetailedCard />
                     <DetailedCard />
                     <DetailedCard />
@@ -79,16 +79,16 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignContent: "center",
         justifyContent: "center",
-        paddingTop: "3rem",
+        paddingTop: 48,
         width: "100%",
-        height: "14rem",
+        height: 224,
         backgroundColor: "black"
     },
     mainImg: {
         width: 170, 
         height: 165,
-        marginLeft: "-0.5rem",
-        marginRight: "1rem"
+        marginLeft: -8,
+        marginRight: 16
     },
     customerprofile:{
         display:"flex",
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     },
     details: {
         backgroundColor: "black",
-        paddingTop: "0.5rem"
+        paddingTop: 8
     },
     name: {
         fontSize: 20, 
@@ -110,17 +110,13 @@ const styles = StyleSheet.create({
     },
     mainCountContainer: {
         display: "flex",
-        paddingHorizontal: "0.5rem",
+        paddingHorizontal: 8,
         backgroundColor: "white",
-        borderRadius: 5,
-        shadowColor: "white",
-        shadowOffset: {width: 4, height: 4},
-        shadowRadius: 5,
-        shadowOpacity: 0.15
+        borderRadius: 5
     },
     image:{
-        width:"150px",
-        height:"150px",
+        width:150,
+        height:150,
     },
     mainCountTitle: {
         fontSize: 20, 
@@ -128,8 +124,8 @@ const styles = StyleSheet.create({
     },
     mainCountSubtitle: {
         fontSize: 10,
-        marginTop: "-0.25rem",
-        marginBottom: "0.25rem"
+        marginTop: -4,
+        marginBottom: 4
     },
     subCountContainer: {
         display: "flex",
@@ -140,7 +136,7 @@ const styles = StyleSheet.create({
     subCountTitle: {
         fontSize: 25, 
         fontWeight: "bold",
-        marginRight: "0.5rem",
+        marginRight: 8,
         color: "white"
     },
     subCountSubtitle: {

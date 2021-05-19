@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
         position: "absolute",
         bottom: 30,
         width: "100%",
-        height: "4rem",
+        height: 64,
         backgroundColor: "transparent"
     },
     innerContainer: {
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
-        paddingHorizontal: "2rem",
+        paddingHorizontal: 32,
         width: "80%",
         height: "100%",
         borderRadius: 21,

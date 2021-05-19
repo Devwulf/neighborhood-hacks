@@ -86,17 +86,17 @@ export class Hashtags extends React.Component<HashtagsProps, HashtagsState>  {
     render() {
         const { tags, onHashtagPress } = this.props;
         return (
-            <View style={{ height: "2rem", marginVertical: "0.25rem" }}
+            <View style={{ height: 32, marginVertical: 4 }}
                 onTouchStart={this.handleStartScroll}
                 onTouchEnd={this.handleStopScroll}>
                 <ScrollView 
                     ref={this.scrollViewRef} 
                     showsHorizontalScrollIndicator={false} 
                     horizontal
-                    style={{width: "100vw", height: "1rem"}} 
+                    style={{width: "100vw", height: 16}} 
                     onScroll={this.handleScroll}>
                     {tags.map((value, index) => (
-                        <View style={{width: "6rem", height: "1rem", marginHorizontal: "0.5rem"}} key={index}>
+                        <View style={{width: 96, height: 16, marginHorizontal: 8}} key={index}>
                             <TouchableOpacity style={styles.hashTagsButton} onPress={() => { if(onHashtagPress) onHashtagPress(value); }}>
                                 <Text style={{color: "white"}}>{value}</Text>
                             </TouchableOpacity>
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
         alignItems:"center",
         justifyContent:"center",
         width: "100%",
-        height: "2rem",
+        height: 32,
         backgroundColor: "black",
         borderRadius: 8
     }

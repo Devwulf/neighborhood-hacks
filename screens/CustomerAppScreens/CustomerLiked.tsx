@@ -36,8 +36,8 @@ export default function CustomerLikedScreen(props: Props) {
     return (
         <View style={styles.container}>
             <Image style={{position: "absolute", width: "100vw", height: "100vh"}} source={require("../../assets/leaves.png")} />
-            <ScrollView style={{backgroundColor: "transparent", width: "100vw", paddingVertical: "4rem"}}>
-                <View style={{backgroundColor:"transparent", width: "100%", paddingHorizontal: "3rem", marginBottom: "1rem"}}>
+            <ScrollView style={{backgroundColor: "transparent", width: "100vw", paddingVertical: 64}}>
+                <View style={{backgroundColor:"transparent", width: "100%", paddingHorizontal: 48, marginBottom: 16}}>
                     <Text style={{fontSize: 28, fontWeight: "bold"}}>Saved Stores</Text>
                 </View>
                 <DetailedCard />

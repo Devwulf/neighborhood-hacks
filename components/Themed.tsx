@@ -79,26 +79,25 @@ export function NextButton(props: NextButtonProps) {
 
 const styles = StyleSheet.create({
     textInput: {
-        height: "48px",
+        height: 48,
         width: "100%",
         backgroundColor: "#ECF1F4",
         color: "#8C8CA1",
         borderRadius: 8,
-        shadowColor: "rgba(74, 74, 104, 0.1)",
-        paddingHorizontal: "1rem"
+        paddingHorizontal: 16
     },
     button: {
         display:"flex",
         alignItems:"center",
         justifyContent:"center",
         width: "100%",
-        height: "48px",
+        height: 48,
         backgroundColor: "black",
         borderRadius: 8
     },
     imagenext:{
-        width:"50px",
-        height:"50px",
+        width:50,
+        height:50,
         backgroundColor:"black",
         borderRadius:50,
     }
